@@ -1,0 +1,60 @@
+body{
+   
+   background-color: #262626;
+}
+
+.title{
+    background-color:#258;
+    width: auto;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    height: auto;
+    line-height: auto;
+    padding: 20px;
+}
+.admin-link, .voter-link{
+  
+    background-color: #c00;
+    color: white;
+    padding: 10px;
+    width: auto;
+    font-size: 20px;
+    margin: 10px;
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+    float: right;
+ 
+
+}
+ a:link{
+    text-decoration: none;
+    color: white !;
+
+}
+a:link:hover{
+    background-color: red;
+    
+}
+a:visited:hover{
+    color:white;
+    background-color:#7775;
+}
+.login-box{
+    background-color: black;
+    color: white;
+    float: left;
+    margin-top: 50px;
+    border-radius: 50px;
+
+}
+.login-box-heading{
+    border-radius: 50px;
+    background-color: #258;
+    color: white;
+    height: 90px;
+    text-align: center;
+    font-size: 30px;
+    line-height: 90px;
+}
