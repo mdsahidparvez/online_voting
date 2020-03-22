@@ -11,7 +11,7 @@
                     
                         <div class="form-group">
                             <label for = "username" >ID No.</label>
-                                <input class="form-control" placeholder="Please Enter Voter's ID Number" name="idno" type="text" required = "required" autofocus>
+                                <input class="form-control" placeholder="Please Enter Voter's ID Number" name="idno" type="text" required = "required"autocomplete="off"  autofocus>
                         </div>
                         
                         <div class="form-group">

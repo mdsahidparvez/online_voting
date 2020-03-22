@@ -31,7 +31,7 @@
                          <form method = "post" enctype = "multipart/form-data">	
 											<div class="form-group">
 												<label>ID Number</label>
-												<input class ="form-control" type = "text" name = "id_number" placeholder = "ID number" required="true">
+												<input class ="form-control" type = "text" name = "id_number" placeholder = "ID number" required="true" autocomplete="off">
 													
 											</div>
 											
@@ -40,7 +40,7 @@
 													$change =  passFunc(8, 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890');
 											?>	
 												<label>Password</label>
-													<input class="form-control"  type = "text" name = "password" id = "pass" required="true"  />
+													<input class="form-control"  type = "text" name = "password" id = "pass" required="true" autocomplete="off" />
 													<input type = "button" value = "Generate" onclick = "document.getElementById('pass').value = '<?php echo $change?>'">
 											</div>
 											
