@@ -20,14 +20,14 @@
                         </div>
                     
                     
-                        <button class=" btn-success btn-block " name = "login">Login</a>
+                        <button class=" btn btn-success" style="margin-left:40%; padding:5px 10px;" name = "login">Log In</a>
                         
                         
                     </fieldset>
                     
                             <?php include ('login_query.php');?>
                 </form>
-                <h6><b>Note:</b> You can  vote  only once </h6>
+               <div class="text-center" style="margin:5px;"> <h6><b>Note:</b> You can  vote  only once </h6></div>
             </div>
         </div>
     </div>
