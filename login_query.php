@@ -15,12 +15,13 @@
 			session_start();
 			$_SESSION['voters_id'] = $row['voters_id'];
 			header('location:vote.php');
-	
+			header('location:ward2.php');
+			
 		
 		}
 		
 		if($voted == 1){
-			echo " <br><center><font color= 'red' size='3'>You Can Only Vote Once</center></font>";
+			echo " <br><center><font color= 'red'  size='5'>You have already voted</center></font>";
 		}else{
 			echo " <br><center><font color= 'red' size='3'>LOGIN ERROR!</center></font>";
 		}

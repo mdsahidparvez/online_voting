@@ -43,7 +43,7 @@
                                             <th>Position</th>
                                             <th>Firstname</th>
                                             <th>Lastname</th>
-                                            
+                                            <th>Year Level</th>
                                             <th>Gender</th>
                                             <th>Image</th>
                                             <th>Action</th>
@@ -57,7 +57,7 @@
 										<?php 
 											require 'dbcon.php';
 											$bool = false;
-											$query = $conn->query("SELECT * FROM candidate ORDER BY candidate_id DESC");
+											$query = $conn->query("SELECT * FROM candidate where ward=1 ORDER BY candidate_id DESC");
 												while($row = $query->fetch_array()){
 													$candidate_id=$row['candidate_id'];
 										?>
@@ -65,6 +65,7 @@
 											<td><?php echo $row ['position'];?></td>
                                             <td><?php echo $row ['firstname'];?></td>
                                             <td><?php echo $row ['lastname'];?></td>
+                                            <td><?php echo $row ['year_level'];?></td>
                                             <td><?php echo $row ['gender'];?></td>
                                             <td width="50"><img src="<?php echo $row['img']; ?>" width="50" height="50" class="img-rounded"></td>
                                             

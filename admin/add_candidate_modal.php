@@ -16,19 +16,15 @@
 				<form method = "post" enctype = "multipart/form-data">	
 					<div class="form-group">
 						<label>Position</label>
-						<select class = "form-control" name = "position">
+						<select class = "form-control" name = "position" required="true">
 								<option></option>
-								<option>Adakshya</option>
-								<option>Vice President for Internal Affairs</option>
-								<option>Vice President for External Affairs</option>
-								<option>Secretary</option>
-								<option>Auditor</option>
-								<option>Treasurer</option>
-								<option>PIO</option>
-								<option>Business Manager</option>
-								<option>Sgt. @ Arms</option>
-								<option>Muse</option>
-								<option>Escort</option>
+								<option>Mayor</option>
+								<option>Deputy Mayor</option>
+								<option>Ward Chairperson</option>
+								<option>Member</option>
+								<option>Woman 1</option>
+								<option>Woman 2</option>
+							
 							</select>
 					</div>
 
@@ -43,19 +39,19 @@
 					</div>
 											
 					<div class="form-group">
-						<label>Year_Level</label>
-							<select class = "form-control" name = "year_level">
+						<label>Party Name</label>
+							<select class = "form-control" name = "party_name" required="true">
 								<option></option>
-								<option>1st Year</option>
-								<option>2nd Year</option>
-								<option>3rd Year</option>
-								<option>4th Year</option>
+								<option>Nepal Communist Party</option>
+								<option>Nepali Congress</option>
+								<option>Rastriya Janata Party</option>
+								<option>Samajbadi Party</option>
 							</select>
 					</div>
 															
 					<div class="form-group">
 						<label>Gender</label>
-							<select class = "form-control" name = "gender">
+							<select class = "form-control" name = "gender" required="true">
 								<option></option>
 								<option>Male</option>
 								<option>Female</option>
@@ -64,13 +60,13 @@
 											
 											
 					<div class="form-group">
-                        <label>Image</label>
+                        <label>Party Logo</label>
 						<input type="file" name="image"required> 
                     </div>
 
 					<div class="form-group">
 						<label>Ward</label>
-							<select class = "form-control" name = "ward">
+							<select class = "form-control" name = "ward" required="true">
 								<option>1</option>
 								<option>2</option>
 								<option>3</option>
@@ -100,7 +96,7 @@
 					$position=$_POST['position'];
 					$firstname=$_POST['firstname'];
 					$lastname=$_POST['lastname'];
-					$year_level=$_POST['year_level'];
+					$party_name=$_POST['party_name'];
 					$gender=$_POST['gender'];
 					$image= addslashes(file_get_contents($_FILES['image']['tmp_name']));
 					$image_name= addslashes($_FILES['image']['name']);
@@ -110,7 +106,7 @@
 					$location="upload/" . $_FILES["image"]["name"];
 					$ward=$_POST['ward'];
 					
-					$conn->query("INSERT INTO candidate(position,firstname,lastname,year_level,gender,img,ward)values('$position','$firstname','$lastname','$year_level','$gender','$location','$ward')")or die(mysql_error());
+					$conn->query("INSERT INTO candidate(position,firstname,lastname,party_name,gender,img,ward)values('$position','$firstname','$lastname','$party_name','$gender','$location','$ward')")or die(mysql_error());
 				}						
 			?>					
         </div>

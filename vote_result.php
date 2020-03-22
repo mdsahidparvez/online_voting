@@ -1,4 +1,4 @@
-<?php include ('head.php');?>
+<?php include ('head2.php');?>
 <?php include ('sess.php');?>
 
 <body>
@@ -102,7 +102,7 @@
 			<center>
 		  <div class="col-lg-8" style = "margin-left:240px;" >
 		  <div class = "alert alert-info">
-			<label>Adakshya</label>
+			<label>Mayor</label>
 			<br />
 			<?php
 				if(!$_SESSION['pres_id'])
@@ -295,7 +295,7 @@
 									
 									<div class="modal-footer">
 								<a href = "submit_vote.php"><button type = "submit" class="btn btn-success"><i class="icon-check"></i>&nbsp;Yes</button></a>
-								<a href = "vote.php"><button class="btn btn-danger" aria-hidden="true"><i class="icon-remove icon-large"></i>&nbsp;Back</button></a>
+								<a href = "ward2.php"><button class="btn btn-danger" aria-hidden="true"><i class="icon-remove icon-large"></i>&nbsp;Back</button></a>
 									</div>
 									</div>
                                     <!-- /.modal-content -->

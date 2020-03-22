@@ -12,7 +12,10 @@
       
 
             <ul class="nav navbar-top-links navbar-right">
-            
+            <a   href="logout.php" style = "color: white; background-color:#fff5;padding:10px;">
+					Logout
+                          
+                    </a>
                <?php require 'dbcon.php';
 				$query = $conn->query("SELECT * from user where user_id ='$session_id'")or die (mysql_error ());
 				
@@ -26,9 +29,10 @@
 					Admin: <?php echo $user_username = $user_row['firstname']." ".$user_row['lastname'];?>
                           
                     </a>
-                   
+                    
                 
                 </li>
+                
            
             </ul>
 			<?php }?>
@@ -45,13 +49,17 @@
                             
                         <li>
                             <a href="candidate.php" style="background-color:#045;color:white;font-size:20px;"><i class = "fa fa-user fa-fw"></i> Manage Candidates</a>
-                        </li>
+                            <ul class="nav nav-second-level">
+                            <li>
+                                    <a href="candidate.php"> All candidates</a>
+                                </li>
+                                <li>
+                                    <a href="ward_1_candidate.php"> Ward 1</a>
+                                </li>
                                 
-                            
-                            <!-- /.nav-second-level -->
-                        </li>
+                            </ul>
 						<li>
-                            <a href="#" style="background-color:#056; color:white;"><i class="fa fa-users"></i> Voters List<span class="fa arrow"></span></a>
+                            <a href="#" style="background-color:#056; color:white;"><i class="fa fa-users"></i> Manage Voters<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
                                     <a href="voters.php"><i class = "fa fa-user fa-fw"></i> View Voters</a>
@@ -69,8 +77,13 @@
                         <li>
                             <a href="canvassing.php" style="background-color:#078; color:white;font-size:15px;"><i class="fa fa-download fa-fw"></i> REPORT</a>
                         </li>
+                        <li>
+                            <a href="ward1_report.php" style="background-color:#078; color:white;font-size:15px;"><i class="fa fa-download fa-fw"></i> ward-1-Report</a>
+                        </li>
                        
-                       
+                        <li>
+                            <a href="voters_list.php" style="background-color:#068; color:white;font-size:15px;"></i> Voters List</a>
+                        </li>
                         <li>
                             <a href="user.php" style="background-color:#ddd; color:black;font-size:20px;margin-top:90px;padding:20px;"><i class="fa fa-user fa-fw"></i> System User</a>
                            

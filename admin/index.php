@@ -1,9 +1,6 @@
 <?php include ('head.php');?>
 
 <body>
-<div class="container title">HAMRO VOTE <br> Online Voting Sytem </div>
-           <div class="container"><a href="index.php" class="admin-link"><i class="fas fa-user" style="font-size:30px;"></i> ADMIN</a><a href="..\index.php" class="voter-link"><i class="fas fa-user" style="font-size:30px;"></i>  Voter</a></div>
-
     <div class="container">
         <div class="row">
             <div class="col-md-4 col-md-offset-4">

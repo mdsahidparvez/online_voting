@@ -1,4 +1,3 @@
-
 <?php include ('head.php');?>
 <body>
 <?php
@@ -18,12 +17,12 @@
 
        <?php include ('side_bar.php');?>
         <!-- Page Content -->
-        <div id="page-wrapper">
+        <div>
             <div class="row">
-                <div class="col-lg-12">
-                    <h3 class="page-header">Registration</h3>
+                <div class="col-12">
+                    <center><h3 class="page-header">Voter Registration Form</h3><center>
                 </div>
-				<div class = "well col-lg-5">
+				<div class = "well col-md-6 col-md-offset-3">
 					<div class="panel panel-green">
                         <div class="panel-heading">
                             Please Enter the Detail Needed Below
@@ -83,7 +82,7 @@
 											</div>
 
 																	
-											 	 <button name = "save" type="submit" class="btn btn-primary">Save Data</button>
+											 	 <button name = "save" type="submit" class="btn btn-primary">Register</button>
 												 
 						  				 </div>
                                        
@@ -119,9 +118,13 @@
 										}
 										else{
 										$conn->query("insert into voters(id_number, password, firstname,lastname,year_level,status,img,ward) VALUES('$id_number', '$password','$firstname','$lastname','$year_level','Unvoted','$location','$ward')");
+										
 									?>
+									
+									
 									<script>
-										alert('Voters Successfully Save');
+										
+										alert('Voters Successfully Registereds');
 										
 									</script>
 									

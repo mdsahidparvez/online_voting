@@ -6,7 +6,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href=""><i class = "fa fa-cog fa-large fa-spin"></i> Automated Voting System</a>
+                <a class="navbar-brand" href="../index.php"> Hamro Vote</a>
 				
             </div>
 
