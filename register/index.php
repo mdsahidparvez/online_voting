@@ -1,5 +1,7 @@
 <?php include ('head.php');?>
 <body>
+
+
 <?php
 	function passFunc($len, $set = "")
 		{
