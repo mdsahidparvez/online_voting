@@ -17,7 +17,7 @@
 		
 										
 					
-											<form action="update_votes.php?voter_id=<?php echo $voters_id; ?>" method = "post" >	
+											<form action="update_voters.php?voter_id=<?php echo $voters_id; ?>" method = "post" >	
 											  <input type="hidden" name="voters_id" value="<?php echo $row1['voters_id'] ?>">
 											<div class="form-group">
 												<label>ID Number</label>

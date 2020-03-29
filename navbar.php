@@ -9,7 +9,7 @@
                 <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
-            <a   class="nav-link" href="admin/voters_list.php" >Voter List</a>
+            <a   class="nav-link" href="voters_list.php" >Voter List</a>
             </li>
             <li class="nav-item active">
             <a class="nav-link" href="register/index.php">REGISTER VOTER</a>
