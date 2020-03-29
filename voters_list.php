@@ -25,7 +25,7 @@
                                     <thead>
                                         <tr>
                                          
-                                            
+                                        <th>ID No.</th>
                                             <th>Name</th>
                                             
                                           
@@ -44,7 +44,8 @@
 										?>
                                       
 											<tr>
-												
+                                            <td><?php echo $row1 ['id_number'];?></td>
+
 												<td><?php echo $row1 ['firstname']." ". $row1 ['lastname'];?></td>
 												
 												
