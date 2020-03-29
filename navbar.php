@@ -12,7 +12,7 @@
             <a   class="nav-link" href="voters_list.php" >Voter List</a>
             </li>
             <li class="nav-item active">
-            <a class="nav-link" href="register/index.php">REGISTER VOTER</a>
+            <a class="nav-link" href="register.php">REGISTER VOTER</a>
             </li>
             <li class="nav-item active">
             <a class="nav-link" href="charts.php">Live Result</a>

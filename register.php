@@ -1,5 +1,6 @@
 <?php include ('head.php');?>
 <body>
+<?php include ('navbar.php');?>
 
 
 <?php
@@ -15,20 +16,21 @@
 		} 
 		
 ?>
-    <div id="wrapper">
+    <div class ="container" id="wrapper" style="background-color:white; margin-top:80px;padding:20px;">
 
-       <?php include ('side_bar.php');?>
         <!-- Page Content -->
         <div>
             <div class="row">
-                <div class="col-12">
-                    <center><h3 class="page-header">Voter Registration Form</h3><center>
+                <div class="container text-center">
+                    <h3>Voter Registration Form</h3>
                 </div>
-				<div class = "well col-md-6 col-md-offset-3">
-					<div class="panel panel-green">
+                <br><br><br>
+				<div class = "container col-md-6">
+					<div class="panel">
                         <div class="panel-heading">
-                            Please Enter the Detail Needed Below
+                            Please Enter the Details Needed Below
                         </div>
+                        <br>
                         <div class="panel-body">
                          <form method = "post" enctype = "multipart/form-data">	
 											<div class="form-group">
@@ -72,7 +74,7 @@
 													</select>
 											</div>
 											<div class="form-group">
-												<label>ward</label>
+												<label>Ward</label>
 													<select class = "form-control" name = "ward">
 														<option></option>
 														<option>1</option>
@@ -92,7 +94,7 @@
 										</form>
 								
 							<?php 
-								require 'dbcon.php';
+								require 'register/dbcon.php';
 								
 								if (isset($_POST['save'])){
 									$firstname=$_POST['firstname'];
@@ -104,7 +106,7 @@
 									$image_name= addslashes($_FILES['image']['name']);
 									$image_size= getimagesize($_FILES['image']['tmp_name']);
 									$ward = $_POST['ward'];
-									move_uploaded_file($_FILES["image"]["tmp_name"],"upload/" . $_FILES["image"]["name"]);			
+									move_uploaded_file($_FILES["image"]["tmp_name"],"register/upload/" . $_FILES["image"]["name"]);			
 									$location="upload/" . $_FILES["image"]["name"];
 
 
@@ -147,7 +149,6 @@
 
     </div>
     <!-- /#wrapper -->
-<?php include ('script.php');?>
 </body>
 
 </html>
