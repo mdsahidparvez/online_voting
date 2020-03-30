@@ -1,14 +1,16 @@
-<?php include ('head.php');?>
+<?php include ('head2.php');?>
+
 
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 col-md-offset-4">
-                <div class="login-panel panel panel-default">
+
+    <div class="container login-box col-md-3" style="margin-top:200px;background-color:white;">
+        
+                <div class="container login-panel panel panel-default">
                     <div class="panel-heading">
-                        <center><h3 class="panel-title">Admin Log In</h3></center>
+                    <br>
+                        <center><h3 class="login-box-heading"><i class="fas fa-user" style="font-size:30px;"></i> Admin</h3></center>
                     </div>
-                    <div class="panel-body">
+                    <div class="container panel-body">
                         <form role="form" method = "post" enctype = "multipart/form-data">
                             <fieldset>
 							
@@ -32,13 +34,13 @@
                         </form>
                     </div>
                 </div>
-            </div>
-			
-			 </div>
+            
         </div>
     </div>
 
   <?php include ('script.php');?>
+  <?php include ('navbar.php');?>
+
 
 </body>
 

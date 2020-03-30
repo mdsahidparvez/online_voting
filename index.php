@@ -3,6 +3,7 @@
 
     <div class="container login-box col-md-3" id="login-box">
         <div class="container">
+        <br>
             <div class="login-box-heading">
                 <i class="fas fa-user" style="font-size:30px;"></i> voter 
             </div>
