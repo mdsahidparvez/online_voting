@@ -13,8 +13,9 @@
                     <h3 class="text-center">Voters List </h3>
                 </div>
 				 
-                 <div class="container" style="position:fixed; margin-left:100px; margin-top:100px;" ><img width=200 height=200 src="https://lh3.googleusercontent.com/proxy/DhyBEZBnhSH_0JdxMhezGBV9o3lM6Gvf79Ahj_Yq160kFiYeE1bu9DnxWERNkKmGAlfu0ZAR-Jw4FG-m2q50hxMIx9s-53eoRY4n6c4laDXixf-llpsU" alt=""></div>
-					
+                 <div class="container" style="position:fixed; margin-left:100px; margin-top:100px;" ><img width=200 height=200 src="pictures\test-512.png" alt=""></div>
+                 <div class="container" style="position:fixed; margin-left:70%; margin-top:100px;" ><h4>Name not in Voter list?<br><h6>Please register or contact admin</h5></h6></div>
+
 				
                     <div class="panel panel-default" style="margin:auto;">
                         
