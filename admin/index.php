@@ -1,7 +1,7 @@
 <?php include ('head2.php');?>
 
 
-<body>
+<body >
 
     <div class="container login-box col-md-3" style="margin-top:200px;background-color:white;">
         

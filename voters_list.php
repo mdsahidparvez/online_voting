@@ -3,7 +3,7 @@
 <body>
 <?php include ('navbar.php');?>
 
-    <div id="wrapper" style="margin-top:80px; background-color:white;">
+    <div id="wrapper" style="margin-top:70px; background-color:white;">
 
 
         <!-- Page Content -->

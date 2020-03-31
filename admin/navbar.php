@@ -35,7 +35,7 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="nav-item active">
-                <a href="..\index.php" class="nav-link "><i class="fas fa-user" ></i>  Voter</a>
+                <a href="..\voter-login.php" class="nav-link "><i class="fas fa-user" ></i>  Voter</a>
 
                 </li>
                 <li class='nav-item active'>

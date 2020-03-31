@@ -16,7 +16,7 @@
 		} 
 		
 ?>
-    <div class ="container" id="wrapper" style="background-color:white; margin-top:80px;padding:20px;">
+    <div class ="container" id="wrapper" style="background-color:white; margin-top:70px;padding:20px;">
 
         <!-- Page Content -->
         <div>

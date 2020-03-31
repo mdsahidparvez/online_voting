@@ -8,6 +8,15 @@ body{
    background-size: cover;
 }
 
+.maincont{
+    background-color: white;
+    padding: 100px;
+    height: 50vh;
+}
+.carousel-inner {
+    height: 300px!important;
+    margin-top: 70px;
+}
 .navbar{
     background-color: white !important;
 }
@@ -59,10 +68,11 @@ transition: 0.3s;
     font-weight: bolder;
     font-family: 'Varela Round', sans-serif;
     color:black !important;
+    margin-left: 20px;
 }
 
 .login-box{
-    background-color:#fff;
+    background-color:white;
     color: black;
     margin: auto;
     margin-top: 200px;

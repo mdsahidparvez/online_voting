@@ -1,49 +1,61 @@
 <?php include ('head.php');?>
 <body>
+    
+  
+            
+    <?php include ('navbar.php');?>
 
-    <div class="container login-box col-md-3" id="login-box">
-        <div class="container">
-        <br>
-            <div class="login-box-heading">
-                <i class="fas fa-user" ></i> Voter 
-            </div>
-            <div class="container" >
-                <form role="form" method = "post" enctype = "multipart/form-data">
-                    <fieldset>
-                    
-                        <div class="form-group">
-                            <label for = "username" >ID No.</label>
-                                <input class="form-control" placeholder="Please Enter Voter's ID Number" name="idno" type="text" required = "required"autocomplete="off"  autofocus>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for = "username" >Password</label>
-                                <input class="form-control" placeholder="Password" name="password" type="password" required = "required">
-                        </div>
-                    
-                    
-                        <button class=" btn btn-success" style="margin-left:40%; padding:5px 10px;" name = "login">Log In</a>
-                        
-                        
-                    </fieldset>
-                    
-                            <?php include ('login_query.php');?>
-                </form>
-               <div class="text-center" style="margin:5px;"> <h6><b>Note:</b> You can  vote  only once </h6></div>
-            </div>
+    <div class="  countdown float-right"><h6>Voting Ends in</h6><p  id="demo"></p></div>
+    <?php include ('script.php');?>
+
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+        <img class="d-block w-100" src="https://ichef.bbci.co.uk/images/ic/1024x576/p07snhjs.jpg" alt="First slide">
+        </div>
+        <div class="carousel-item">
+        <img class="d-block w-100" src="https://www.suwanee.com/Home/ShowPublishedImage/1122/636585425989330000" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+        <img class="d-block w-100" src="https://www.sachamber.org/wp-content/uploads/2019/06/Vote-Graphic-03.jpg" alt="Third slide">
         </div>
     </div>
-        
-<?php include ('navbar.php');?>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+    </div>
 
-<div class="  countdown float-right"><h6>Voting Ends in</h6><p  id="demo"></p></div>
-<?php include ('script.php');?>
 
+    <div class="container-fluid maincont">
+        <div class="row">
+            <div class="text-center col-md-4">
+                <h1>Are you ready to Vote ?</h1>
+            </div>
+            <div class=" col-md-4 " style="text-align:center;">
+                <h1><a href="">Login to vote</a></h1>
+                <h6>If you are already registered</h6>
+
+            </div><div class=" col-md-4 " style="text-align:center;">
+                <h1><a href="">Register</a></h1>
+
+            </div>
+
+        </div>
+
+
+    </div>
 </body>
-
-
-
-
 
 
 
