@@ -8,7 +8,7 @@
                 <div class="container login-panel panel panel-default">
                     <div class="panel-heading">
                     <br>
-                        <center><div class="login-box-heading"><i class="fas fa-user" style="font-size:30px;"></i> Admin</center>
+                        <center><div class="login-box-heading"><i class="fas fa-user" ></i> Admin</center>
                     </div>
                     <div class="container panel-body">
                         <form role="form" method = "post" enctype = "multipart/form-data">
@@ -36,6 +36,7 @@
                 </div>
             
         </div>
+        
     </div>
 
   <?php include ('script.php');?>

@@ -4,12 +4,16 @@
 body{
    
    background-color: #262626;
-   background-image: url(https://miro.medium.com/max/635/0*-sOaKkBVyv8IjRii.);
+   background-image:url(../pictures/ccc.jpg);
    background-size: cover;
 }
+
+.navbar{
+    background-color: white !important;
+}
 .countdown{
-    color:red;
     background-color: white;
+    color:red;
     border: 5px solid rgb(10, 223, 252);
     width: 200px;
     height:100px;
@@ -32,11 +36,13 @@ body{
     margin-top: -400px;
 }
 .nav-item a {
-    font-size: large;
+    font-size: 15px;
+    font-weight: bolder;
     font-family: 'Varela Round', sans-serif;
     text-transform: uppercase;
     margin-left:10px;
     height: 40px;
+    color: black !important;
 }
 .nav-link:hover{
    
@@ -48,12 +54,11 @@ transition: 0.3s;
     margin:auto;
 }
 .navbar-brand{
-    
     font-size: 30px;
     letter-spacing: 2px;
     font-weight: bolder;
     font-family: 'Varela Round', sans-serif;
-    padding: 10px;
+    color:black !important;
 }
 
 .login-box{
@@ -73,6 +78,6 @@ transition: 0.3s;
     height: 50px;
   
     text-align: center;
-    font-size: 25px;
+    font-size: 20px;
     line-height: 50px;
 }
