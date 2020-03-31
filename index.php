@@ -5,7 +5,7 @@
         <div class="container">
         <br>
             <div class="login-box-heading">
-                <i class="fas fa-user" style="font-size:30px;"></i> voter 
+                <i class="fas fa-user" style="font-size:30px;"></i> Voter 
             </div>
             <div class="container" >
                 <form role="form" method = "post" enctype = "multipart/form-data">

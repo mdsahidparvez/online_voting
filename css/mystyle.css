@@ -10,12 +10,15 @@ body{
 .countdown{
     color:red;
     background-color: white;
-    border-radius: 100%;
+    border: 5px solid rgb(10, 223, 252);
+    width: 200px;
+    height:100px;
+    border-radius: 20px;
     text-align: center;
-    padding: 20px;
+    padding: 10px;
     margin-right: 50px;
     font-size: 20px;
-    margin-top: -350px;
+    margin-top: -390px;
 }
 .now{
     text-shadow: 0px 0px 20px blue;
@@ -45,6 +48,7 @@ transition: 0.3s;
     margin:auto;
 }
 .navbar-brand{
+    
     font-size: 30px;
     letter-spacing: 2px;
     font-weight: bolder;

@@ -8,7 +8,7 @@
                 <div class="container login-panel panel panel-default">
                     <div class="panel-heading">
                     <br>
-                        <center><h3 class="login-box-heading"><i class="fas fa-user" style="font-size:30px;"></i> Admin</h3></center>
+                        <center><div class="login-box-heading"><i class="fas fa-user" style="font-size:30px;"></i> Admin</center>
                     </div>
                     <div class="container panel-body">
                         <form role="form" method = "post" enctype = "multipart/form-data">
@@ -25,7 +25,7 @@
                                 </div>
                              
                               
-                                <button class="btn btn-lg btn-success btn-block " name = "login">Login</a>
+                                <button class="btn  btn-success" style="margin-left:40%; padding:5px 10px;" name = "login">Login</a>
 								
 								
                             </fieldset>

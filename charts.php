@@ -30,8 +30,8 @@
         ]);
 
         var options = {'title':'Number of Faculty Specializations',
-                'width':1300,
-                'height':900};
+                'width':900,
+                'height':600};
 
         var chart = new google.visualization.PieChart(document.getElementById('piechart'));
 
@@ -41,6 +41,6 @@
   </head>
   <body>
     <?php include "navbar.php" ?>
-    <div id="piechart" style="width: 800px; height: 800px;"></div>
+    <div class="container text-center" id="piechart"></div>
   </body>
 </html>
