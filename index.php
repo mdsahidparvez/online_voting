@@ -17,7 +17,7 @@
     </ol>
     <div class="carousel-inner">
         <div class="carousel-item active">
-        <img class="d-block w-100" src="https://ichef.bbci.co.uk/images/ic/1024x576/p07snhjs.jpg" alt="First slide">
+        <img class="d-block w-100" src="pictures\as.jpg" alt="First slide">
         </div>
         <div class="carousel-item">
         <img class="d-block w-100" src="https://www.suwanee.com/Home/ShowPublishedImage/1122/636585425989330000" alt="Second slide">
