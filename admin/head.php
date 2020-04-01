@@ -21,7 +21,6 @@
 
     <!-- Custom CSS -->
     <link href="../css/sb-admin-2.css" rel="stylesheet">
-    <link href="../css/mystyle.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/2231328f8b.js"></script>
 
 

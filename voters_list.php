@@ -9,15 +9,14 @@
         <!-- Page Content -->
         <div id="page-wrapper">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12" style="background-color:#098;">
                     <h3 class="text-center">Voters List </h3>
                 </div>
 				 
-                 <div class="container" style="position:fixed; margin-left:100px; margin-top:100px;" ><img width=200 height=200 src="pictures\test-512.png" alt=""></div>
-                 <div class="container" style="position:fixed; margin-left:70%; margin-top:100px;" ><h4>Name not in Voter list?<br><h6>Please register or contact admin</h5></h6></div>
+                 <div class="container col-md-3 " ><img width=200 height=200 src="pictures\test-512.png" alt=""></div>
 
 				
-                    <div class="panel panel-default" style="margin:auto;">
+                    <div class="coontainer col-md-6 " >
                         
                         <!-- /.panel-heading -->
                         <div class="panel-body">
@@ -64,6 +63,8 @@
                         </div>
                         <!-- /.panel-body -->
                     </div>
+                    <div class="container col-md-3 text-center"  style="background-color:white;color:black;padding:100px;  " ><h4>Name not in Voter list?<br><h6>Please register or contact admin</h5></h6></div>
+
                     <!-- /.panel -->
               
             </div>

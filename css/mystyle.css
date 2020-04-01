@@ -7,19 +7,31 @@ body{
    background-image:url(../pictures/ccc.jpg);
    background-size: cover;
 }
+a{
+    text-decoration: none !important;
+    color: white;
+
+    
+}
+a:hover{
+    color: white !important;
+    text-shadow: 0px 0px 10px white;
+}
 
 .maincont{
     background-color: white;
     padding: 100px;
     height: 50vh;
+    
 }
 .carousel-inner {
-    height: 300px!important;
-    margin-top: 70px;
+    height: 350px!important;
+    margin-top: 70px !important;
 }
 .navbar{
     background-color: white !important;
 }
+
 .countdown{
     background-color: white;
     color:red;

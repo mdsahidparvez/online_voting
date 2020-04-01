@@ -23,7 +23,7 @@
         <img class="d-block w-100" src="https://www.suwanee.com/Home/ShowPublishedImage/1122/636585425989330000" alt="Second slide">
         </div>
         <div class="carousel-item">
-        <img class="d-block w-100" src="https://www.sachamber.org/wp-content/uploads/2019/06/Vote-Graphic-03.jpg" alt="Third slide">
+        <img class="d-block w-100" src="pictures\fff.jpg" alt="Third slide">
         </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -42,12 +42,13 @@
             <div class="text-center col-md-4">
                 <h1>Are you ready to Vote ?</h1>
             </div>
-            <div class=" col-md-4 " style="text-align:center;">
-                <h1><a href="">Login to vote</a></h1>
+            <div class="col-md-4 " style="text-align:center;background-color:#000;color:white;padding:10px;">
+                <h1><a href="voter-login.php">Login to vote</a></h1>
                 <h6>If you are already registered</h6>
 
-            </div><div class=" col-md-4 " style="text-align:center;">
-                <h1><a href="">Register</a></h1>
+            </div>
+            <div class="col-md-4 " style="text-align:center;background-color:#00e;color:white;padding:10px;">
+                <h1><a href="register.php">Register</a></h1>
 
             </div>
 
