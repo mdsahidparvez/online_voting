@@ -38,6 +38,7 @@
 
 
     <div class="container-fluid maincont">
+        <div class="  text-center" style="color:red;padding:20px;"><h3>Online Voting System for MUNICIPALITY</h3></div>
         <div class="row">
             <div class="text-center col-md-4">
                 <h1>Are you ready to Vote ?</h1>

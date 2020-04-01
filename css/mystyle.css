@@ -13,15 +13,15 @@ a{
 
     
 }
-a:hover{
+h1 a:hover{
     color: white !important;
     text-shadow: 0px 0px 10px white;
 }
 
 .maincont{
     background-color: white;
-    padding: 100px;
-    height: 50vh;
+    padding: 50px;
+    height: 50vh ;
     
 }
 .carousel-inner {
@@ -67,8 +67,8 @@ a:hover{
 }
 .nav-link:hover{
    
-border-bottom: 3px solid red;
-transition: 0.3s;
+border-bottom: 4px solid red;
+transition: 0.2s;
 }
 
 .navbar-nav{

@@ -41,6 +41,8 @@
   </head>
   <body>
     <?php include "navbar.php" ?>
+    <div class="container-fluid" style="height:100vh;width:100vw;background-color:white;">
     <div class="container text-center" id="piechart"></div>
+    </div>
   </body>
 </html>

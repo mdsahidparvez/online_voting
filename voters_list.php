@@ -13,7 +13,7 @@
                     <h3 class="text-center">Voters List </h3>
                 </div>
 				 
-                 <div class="container col-md-3 " ><img width=200 height=200 src="pictures\test-512.png" alt=""></div>
+                 <div class="container col-md-3 text-center" ><img width=200 height=200 src="pictures\test-512.png" alt=""></div>
 
 				
                     <div class="coontainer col-md-6 " >
