@@ -6,7 +6,7 @@
     </div>
 	<form method = "POST" action = "vote_result.php">
     <div class='container ' style="background-color:white; text-align:center;"><h3>WARD : <?php echo $row['ward'];?></h3></div>
-	<div class="col-lg-6">
+		<div class="col-lg-6">
 	
                     <div class="panel panel-primary">
                         <div class="panel-heading"><center>
@@ -40,7 +40,7 @@
 						</div>
                        
                     </div>
-     </div>
+     	</div>
 				
 				
 				<div class="col-lg-6">

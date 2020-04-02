@@ -24,7 +24,7 @@
 				
                     <div class="panel panel-default">
                         <div class="panel-heading" style="background-color:black;color:white;text-align:center;">
-							Canvassing Report
+							REPORT (WARD 1)
                         </div>
 						
 					<br/>

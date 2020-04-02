@@ -61,15 +61,15 @@
 					
 					</thead>
 					<?php
-		require 'dbcon.php';
-			$query = $conn->query("SELECT * FROM candidate WHERE position = 'Mayor'");
-		while($fetch = $query->fetch_array())
-		{
-			$id = $fetch['candidate_id'];
-			$query1 = $conn->query("SELECT COUNT(*) as total FROM `votes` WHERE candidate_id = '$id'");
-			$fetch1 = $query1->fetch_assoc();
+						require 'dbcon.php';
+							$query = $conn->query("SELECT * FROM candidate WHERE position = 'Mayor'");
+						while($fetch = $query->fetch_array())
+						{
+							$id = $fetch['candidate_id'];
+							$query1 = $conn->query("SELECT COUNT(*) as total FROM `votes` WHERE candidate_id = '$id'");
+							$fetch1 = $query1->fetch_assoc();
 			
-	?>
+					?>
 					<tbody> 
 						<td><?php echo $fetch ['firstname']. " ".$fetch ['lastname'];?></td>
 						<td><img src = "<?php echo $fetch ['img'];?>" style = "width:40px; height:40px; border-radius:500px; " >
@@ -85,21 +85,21 @@
 							
 			<table class="table table-striped table-bordered table-hover ">
 					<thead>
-						<td style = "width:600px;"class = "alert alert-success">Candidate for Vice President for Internal</td>
+						<td style = "width:600px;"class = "alert alert-success">Deputy Mayor</td>
 						<td style = "width:200px;" class = "alert alert-success">Image</td>
 						<td class = "alert alert-success">Total</td>
 					
 					</thead>
 					<?php
-			require 'dbcon.php';
-			$query = $conn->query("SELECT * FROM candidate WHERE position = 'Vice President for Internal Affairs'");
-		while($fetch = $query->fetch_array())
-		{
-			$id = $fetch['candidate_id'];
-			$query1 = $conn->query("SELECT COUNT(*) as total FROM `votes` WHERE candidate_id = '$id'");
-			$fetch1 = $query1->fetch_assoc();
-			
-	?>
+							require 'dbcon.php';
+							$query = $conn->query("SELECT * FROM candidate WHERE position = 'Deputy Mayor'");
+						while($fetch = $query->fetch_array())
+						{
+							$id = $fetch['candidate_id'];
+							$query1 = $conn->query("SELECT COUNT(*) as total FROM `votes` WHERE candidate_id = '$id'");
+							$fetch1 = $query1->fetch_assoc();
+							
+					?>
 					<tbody> 
 						<td><?php echo $fetch ['firstname']. " ".$fetch ['lastname'];?></td>
 						<td><img src = "<?php echo $fetch ['img'];?>" style = "width:40px; height:40px; border-radius:500px; " >
@@ -113,14 +113,14 @@
 			
 			<table class="table table-striped table-bordered table-hover ">
 					<thead>
-						<td style = "width:600px;"class = "alert alert-success">Candidate for Vice President for External</td>
+						<td style = "width:600px;"class = "alert alert-success">Ward Chairperson (WARD -1)</td>
 						<td style = "width:200px;" class = "alert alert-success">Image</td>
 						<td class = "alert alert-success">Total</td>
 					
 					</thead>
 					<?php
 		require 'dbcon.php';
-		$query = $conn->query("SELECT * FROM candidate WHERE position = 'Vice President for External Affairs'");
+		$query = $conn->query("SELECT * FROM candidate WHERE position = 'Ward Chairperson'");
 		while($fetch = $query->fetch_array())
 		{
 			$id = $fetch['candidate_id'];
