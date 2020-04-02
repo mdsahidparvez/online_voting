@@ -9,8 +9,8 @@
         <!-- Page Content -->
         <div id="page-wrapper">
             <div class="row">
-                <div class="col-md-12" style="background-color:#098;">
-                    <h3 class="text-center">Voters List </h3>
+                <div class="col-md-12 " style="background-color:#098;">
+                    <h3 class="text-center " >Voters List </h3>
                 </div>
 				 
                  <div class="container col-md-3 text-center" ><img width=200 height=200 src="pictures\test-512.png" alt=""></div>

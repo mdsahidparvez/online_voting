@@ -6,13 +6,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="" style = "color:white;font-size:25px;margin-left:50px; line-height:60px;">Hamro Vote </a>
+                <a class="navbar-brand" href="" style = "color:white;font-size:35px;margin-left:50px; line-height:60px;">Hamro Vote </a>
 				
             </div>
       
 
             <ul class="nav navbar-top-links navbar-right">
-            <a   href="logout.php" style = "color: white; background-color:#fff5;padding:10px;">
+            <a   href="logout.php" style = "color: white; background-color:#f55;padding:10px;">
 					Logout
                           
                     </a>
@@ -25,7 +25,7 @@
 			 ?>
                
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" style = "color: white">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" style = "color: white; font-size:30px;">
 					Admin: <?php echo $user_username = $user_row['firstname']." ".$user_row['lastname'];?>
                           
                     </a>
