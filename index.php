@@ -44,12 +44,12 @@
                 <h1>Are you ready to Vote ?</h1>
             </div>
             <div class="col-md-4 " style="text-align:center;background-color:#000;color:white;padding:10px;">
-                <h1><a href="voter-login.php">Login to vote</a></h1>
+                <h1><a href="voter-login.php"><i class="fas fa-sign-in-alt"></i> Login to vote</a></h1>
                 <h6>If you are already registered</h6>
 
             </div>
             <div class="col-md-4 " style="text-align:center;background-color:#00e;color:white;padding:10px;">
-                <h1><a href="register.php">Register</a></h1>
+                <h1><a href="register.php">Register now </a></h1>
 
             </div>
 

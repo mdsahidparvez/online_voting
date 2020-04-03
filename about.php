@@ -14,22 +14,22 @@
 
         <div class="container-fluid maincont">
             <div class="row">
-                <div class="text-center col-md-3" style="text-align:center;background-color:#245689;color:white;padding:10px;">
-                    <h1>Online Voting System for MUNICIPALITY</h1>
+                <div class="text-center col-md-3" style="text-align:center;background-color:#245689;color:white;padding:20px;">
+                    <h3>Online Voting System for MUNICIPALITY</h3>
 
                 </div>
-                <div class="col-md-3 " style="text-align:center;background-color:#b5bcff;color:white;padding:10px;">
-                    <h1> Online Voter Resgistration</h1>
+                <div class="col-md-3 " style="text-align:center;background-color:#b5bcff;color:white;padding:20px;">
+                    <h3> Online Voter Resgistration</h3>
                     
 
                 </div>
-                <div class="col-md-3 " style="text-align:center;background-color:#ff613d;color:white;padding:10px;">
-                    <h1>Automatic Vote Count</h1>
+                <div class="col-md-3 " style="text-align:center;background-color:#ff613d;color:white;padding:20px;">
+                    <h3>Automatic Vote Count</h3>
                     
 
                 </div>
-                <div class="col-md-3 " style="text-align:center;background-color:#00999e;color:white;padding:10px;">
-                    <h1>Live Result</h1>
+                <div class="col-md-3 " style="text-align:center;background-color:#00999e;color:white;padding:20px;">
+                    <h3>Live Result</h3>
 
                 </div>
 
