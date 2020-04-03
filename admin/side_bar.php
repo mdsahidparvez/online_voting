@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom:0; background-color:black;height:90px;">
+<nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom:0; background-color:white;height:90px;">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -6,7 +6,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="" style = "color:white;font-size:35px;margin-left:50px; line-height:60px;">Hamro Vote </a>
+                <a class="navbar-brand" href="#"><img src="..\pictures\logo.png" width="200px;" height="50px;" alt=""> </a>
 				
             </div>
       
@@ -25,7 +25,7 @@
 			 ?>
                
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" style = "color: white; font-size:30px;">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" style = "color: black; font-size:30px;">
 					Admin: <?php echo $user_username = $user_row['firstname']." ".$user_row['lastname'];?>
                           
                     </a>
