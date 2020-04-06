@@ -102,6 +102,8 @@
 									$id_number=$_POST['id_number'];
 									$year_level=$_POST['year_level'];
 									$password = $_POST['password'];
+									//$password=password_hash($password,PASSWORD_BCRYPT);
+
 									$image= addslashes(file_get_contents($_FILES['image']['tmp_name']));
 									$image_name= addslashes($_FILES['image']['name']);
 									$image_size= getimagesize($_FILES['image']['tmp_name']);
