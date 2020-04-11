@@ -19,7 +19,7 @@
                        
                         <div class="panel-body">
 						<?php
-                            $vward= $row['ward'];//declearing voters ward
+                            $vward= $row['ward'];//declearing voters ward retrieved from side_bar.php
 							$query = $conn->query("SELECT * FROM `candidate` WHERE candidate.position = 'Mayor' ") or die(mysqli_errno());
 							while($fetch = $query->fetch_array())
 						{
@@ -96,11 +96,11 @@
 	<div class="col-lg-6">
 	  <div class="panel panel-primary">
             <div class="panel-heading">
-			<center>SECRETARY</center>
+			<center>MEMBER</center>
             </div>
             <div class="panel-body" style = "background-color:;">
 				<?php
-					$query = $conn->query("SELECT * FROM `candidate` WHERE `position` = 'Secretary' and ward=$vward") or die(mysqli_errno());
+					$query = $conn->query("SELECT * FROM `candidate` WHERE `position` = 'Member' and ward=$vward") or die(mysqli_errno());
 					while($fetch = $query->fetch_array())
 					{
 				?>

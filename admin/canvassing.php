@@ -62,9 +62,17 @@
 					</thead>
 					<?php
 						require 'dbcon.php';
+						$key = 'qkwjdiw239&&jdafweihbrhnan&^%$ggdnawhd4njshjwuuO';
+
+						function decryptthis($data, $key) { 
+							$encryption_key = base64_decode($key);
+							list($encrypted_data, $iv) = array_pad(explode('::', base64_decode($data), 2),2,null);
+							return openssl_decrypt($encrypted_data, 'aes-256-cbc', $encryption_key, 0, $iv); 
+						} 
 							$query = $conn->query("SELECT * FROM candidate WHERE position = 'Mayor'");
 						while($fetch = $query->fetch_array())
-						{
+						{	  
+
 							$id = $fetch['candidate_id'];
 							$query1 = $conn->query("SELECT COUNT(*) as total FROM `votes` WHERE candidate_id = '$id'");
 							$fetch1 = $query1->fetch_assoc();

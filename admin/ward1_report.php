@@ -90,14 +90,14 @@
 						
 			<table class="table table-striped table-bordered table-hover ">
 					<thead>
-						<td style = "width:600px;"class = "alert alert-success">Candidate for Secretary</td>
+						<td style = "width:600px;"class = "alert alert-success">MEMBER</td>
 						<td style = "width:200px;" class = "alert alert-success">Image</td>
 						<td class = "alert alert-success">Total</td>
 					
 					</thead>
 					<?php
 		require 'dbcon.php';
-		$query = $conn->query("SELECT * FROM candidate WHERE position = 'Secretary'");
+		$query = $conn->query("SELECT * FROM candidate WHERE position = 'Member'");
 		while($fetch = $query->fetch_array())
 		{
 			$id = $fetch['candidate_id'];
