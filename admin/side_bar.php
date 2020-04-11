@@ -23,6 +23,14 @@
 				
 				
 			 ?>
+                <li class="dropdown">
+				<img src="<?php echo $row ['img']?>" style="width:70px;height:70px;border-radius:100%;" onclick="window.open(this.src)" alt="">
+											
+											
+                    </a>
+                    
+                
+                </li>
                
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" style = "color: black; font-size:30px;">

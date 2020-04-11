@@ -33,6 +33,10 @@
 												<label>Lastname</label>
 													<input class="form-control"  type = "text" name = "lastname" placeholder="Please enter lastname" required="true">
 											</div>
+											<div class="form-group">
+												<label>Photo</label>
+												<input type="file" name="image"required> 
+											</div>
 											
 											
 									
@@ -58,7 +62,13 @@
 								$firstname=$_POST['firstname'];
 								$lastname=$_POST['lastname'];
 										
-		
+								
+								$image= addslashes(file_get_contents($_FILES['image']['tmp_name']));
+								$image_name= addslashes($_FILES['image']['name']);
+								$image_size= getimagesize($_FILES['image']['tmp_name']);
+
+								move_uploaded_file($_FILES["image"]["tmp_name"],"upload/admin/" . $_FILES["image"]["name"]);			
+								$location="upload/admin/" . $_FILES["image"]["name"];
 		
 								$query = $conn->query("SELECT * FROM user WHERE username='$username'") or die (mysql_error());
 								$count1 = $query->num_rows;
@@ -71,7 +81,7 @@
 							<?php
 								}
 								else{
-									$conn->query("INSERT INTO user(username,password,firstname,lastname) VALUES('$username','$password','$firstname','$lastname')");
+									$conn->query("INSERT INTO user(username,password,firstname,lastname,img) VALUES('$username','$password','$firstname','$lastname','$location')");
 									header('location:user.php');
 							?>
 									<script>
