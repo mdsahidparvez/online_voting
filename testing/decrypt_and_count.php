@@ -41,8 +41,8 @@
 
 	$result=$conn->query("select * from votes ");
     while($row=$result->fetch_assoc()){
-		$candidate_id=$row['candidate_id'];
-    	//$candidate_id=decryptthis( $row['candidate_id'],$key); //decrypting the candidate_id 
+		//$candidate_id=$row['candidate_id'];	//without decrypting
+    	$candidate_id=decryptthis( $row['candidate_id'],$key); //decrypting the candidate_id 
 	   // echo'<p>Candidate_id:'.$candidate_id.'</p>';
 	   
 	   if ($candidate_id==1){
