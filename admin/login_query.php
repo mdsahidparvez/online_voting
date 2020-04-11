@@ -7,7 +7,7 @@
 		$password=$_POST['password'];
 	
 		
-		$query = $conn->query("SELECT * FROM user WHERE username = 	'$username' AND password = '$password'") or die(mysql_error());
+		$query = $conn->query("SELECT * FROM user WHERE username = 	'$username'") or die(mysql_error());
 		$rows = $query->num_rows;
 		$fetch = $query->fetch_array();
 																		
@@ -18,9 +18,10 @@
 				else if ($rows > 0)
 					{
 					session_start();
-					$_SESSION['id'] = $fetch['user_id'];
-					header("location:candidate.php");
-				
+					if(password_verify($password, $fetch['password'])){ //password verification
+						$_SESSION['id'] = $fetch['user_id'];
+						header("location:candidate.php");
+					}
 			}	
 	
 	}

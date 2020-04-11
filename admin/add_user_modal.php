@@ -53,6 +53,8 @@
 								
 								$username=$_POST['username'];
 								$password=$_POST['password'];
+								$password=password_hash($password,PASSWORD_BCRYPT);//pasword hashing 
+
 								$firstname=$_POST['firstname'];
 								$lastname=$_POST['lastname'];
 										
