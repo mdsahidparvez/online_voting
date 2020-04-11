@@ -13,15 +13,15 @@
                     <h3 class="text-center " >Voters List </h3>
                 </div>
 				 
-                 <div class="container col-md-3 text-center" ><img width=200 height=200 src="pictures\test-512.png" alt=""></div>
-
+                 <div class="container col-md-3 text-center" style="margin-top:100px;" ><img width=200 height=200 src="pictures\test-512.png" alt=""></div>
+                    <div class="container col-md-3 " style="position:absolute;margin-top:60px;margin:50px;color:blue;"><h1> <i class="fas fa-search"></i>voter id</h1><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for ID no."></div>
 				
-                    <div class="coontainer col-md-6 " >
+                    <div class="container col-md-6 " >
                         
                         <!-- /.panel-heading -->
                         <div class="panel-body">
                             <div class="">
-                                <table class="table table-striped table-bordered table-hover" >
+                                <table id="myTable" class="table table-striped table-bordered table-hover" >
                                     <thead>
                                         <tr>
                                          
@@ -79,6 +79,30 @@
 
 
 </body>
+
+<script>///search voter list
+function myFunction() {
+  // Declare variables
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+</script>
 
 </html>
 
