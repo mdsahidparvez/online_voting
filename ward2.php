@@ -163,7 +163,7 @@
 			</div>      
         </div>
      </div>
-	<div class="col-lg-6">
+	<!--<div class="col-lg-6">
 	  <div class="panel panel-primary">
             <div class="panel-heading">
 			<center>PIO</center>
@@ -276,7 +276,7 @@
 				?>
 			</div>      
         </div>
-     </div>
+     </div>------------------------------->
 		
 		<center><button class = "btn btn-success ballot" type = "submit" name = "submit">Submit Ballot</button></center>
 		</form>
