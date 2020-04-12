@@ -120,11 +120,11 @@
 	<div class="col-lg-6">
 	  <div class="panel panel-primary">
             <div class="panel-heading">
-			<center>AUDITOR</center>
+			<center>Woman Member</center>
             </div>
             <div class="panel-body" style = "background-color:;">
 				<?php
-					$query = $conn->query("SELECT * FROM `candidate` WHERE `position` = 'Auditor'") or die(mysqli_errno());
+					$query = $conn->query("SELECT * FROM `candidate` WHERE `position` = 'Woman Member'") or die(mysqli_errno());
 					while($fetch = $query->fetch_array())
 					{
 				?>
@@ -143,11 +143,11 @@
 	 <div class="col-lg-6">
 	  <div class="panel panel-primary">
             <div class="panel-heading">
-			<center>TREASURER</center>
+			<center>Dalit Woman Member</center>
             </div>
             <div class="panel-body" style = "background-color:;">
 				<?php
-					$query = $conn->query("SELECT * FROM `candidate` WHERE `position` = 'Treasurer'") or die(mysqli_errno());
+					$query = $conn->query("SELECT * FROM `candidate` WHERE `position` = 'Dalit Woman Member'") or die(mysqli_errno());
 					while($fetch = $query->fetch_array())
 					{
 				?>
