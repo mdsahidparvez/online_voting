@@ -2,7 +2,7 @@
 <body>
 <?php include ('navbar.php');?>
 
-
+						  
 <?php
 	function passFunc($len, $set = "")
 		{
@@ -17,6 +17,48 @@
 		
 ?>
     <div class ="container" id="wrapper" style="background-color:white; margin-top:70px;padding:20px;">
+	
+		<?php 	//////////////////FORM VALIDATION
+			require 'register/dbcon.php';
+
+			if (isset($_POST['save'])){
+				$firstname=$_POST['firstname'];
+				$lastname=$_POST['lastname'];
+				$id_number=$_POST['id_number'];
+				$year_level=$_POST['year_level'];
+				$dob=$_POST['dob'];
+				$pass = $_POST['password'];
+				$password=password_hash($pass,PASSWORD_BCRYPT);//pasword hashing
+
+				$image= addslashes(file_get_contents($_FILES['image']['tmp_name']));
+				$image_name= addslashes($_FILES['image']['name']);
+				$image_size= getimagesize($_FILES['image']['tmp_name']);
+				$ward = $_POST['ward'];
+				move_uploaded_file($_FILES["image"]["tmp_name"],"register/upload/" . $_FILES["image"]["name"]);			
+				$location="upload/" . $_FILES["image"]["name"];
+
+
+				$query = $conn->query("SELECT * FROM voters WHERE id_number='$id_number'") or die (mysql_error());
+				$count = $query->fetch_array();
+
+				if ($count  > 0){ 
+				
+					echo "<h2><p class=\"alert-danger text-center\" ><strong>ERROR!</strong> ID already exists</p></h2>";					
+				
+				}
+				elseif (strlen($pass)<8) {
+
+					echo "<h2><p class=\"alert-danger text-center\" ><strong>ERROR!</strong> Password must be atleast 8 character long </p></h2>";					
+					
+				}
+				else{
+					$conn->query("insert into voters(id_number, password, firstname,lastname,year_level,status,img,ward,dob) VALUES('$id_number', '$password','$firstname','$lastname','$year_level','Unvoted','$location','$ward','$dob')");
+					
+					echo "<h2><p class=\"alert-success text-center\" ><strong>SUCCESS!</strong> Your form is successfully submitted for verification.<br>Check voter list within 5 days </p></h2>";
+								
+				}
+			} 
+		?> <!------end form validation ---->
 
         <!-- Page Content -->
         <div>
@@ -61,10 +103,14 @@
 												<label>Citizenship Photo</label>
 												<input type="file" name="image"required> 
 											</div>
+											<div class="form-group">
+												<label for="birthday">Date of Birth:</label>
+												<input type="date" id="" name="dob" required >
+											</div>
 											
 											<div class="form-group">
 												<label>Year_Level</label>
-													<select class = "form-control" name = "year_level">
+													<select class = "form-control" name = "year_level" required>
 														<option></option>
 														<option>1st Year</option>
 														<option>2nd Year</option>
@@ -75,8 +121,8 @@
 											</div>
 											<div class="form-group">
 												<label>Ward</label>
-													<select class = "form-control" name = "ward">
-														<option></option>
+													<select class = "form-control" name = "ward"  required="true">
+														<option value="">select your ward </option>
 														<option>1</option>
 														<option>2</option>
 														<option>3</option>
@@ -93,52 +139,7 @@
 										
 										</form>
 								
-							<?php 
-								require 'register/dbcon.php';
-								
-								if (isset($_POST['save'])){
-									$firstname=$_POST['firstname'];
-									$lastname=$_POST['lastname'];
-									$id_number=$_POST['id_number'];
-									$year_level=$_POST['year_level'];
-									$password = $_POST['password'];
-									$password=password_hash($password,PASSWORD_BCRYPT);//pasword hashing
-
-									$image= addslashes(file_get_contents($_FILES['image']['tmp_name']));
-									$image_name= addslashes($_FILES['image']['name']);
-									$image_size= getimagesize($_FILES['image']['tmp_name']);
-									$ward = $_POST['ward'];
-									move_uploaded_file($_FILES["image"]["tmp_name"],"register/upload/" . $_FILES["image"]["name"]);			
-									$location="upload/" . $_FILES["image"]["name"];
-
-
-									$query = $conn->query("SELECT * FROM voters WHERE id_number='$id_number'") or die (mysql_error());
-									$count = $query->fetch_array();
-
-									if ($count  > 0){ 
-									?>
-										<script>
-											alert("ID Number Already Exist");
-										</script>
-									<?php
-										}
-										else{
-										$conn->query("insert into voters(id_number, password, firstname,lastname,year_level,status,img,ward) VALUES('$id_number', '$password','$firstname','$lastname','$year_level','Unvoted','$location','$ward')");
-										
-									?>
-									
-									
-									<script>
-										
-										alert('Voters Successfully Registered');
-										
-									</script>
-									
-							<?php
-									}
-								} 
-							?>
-						  
+							
 						
 						</div>
 						</form>
