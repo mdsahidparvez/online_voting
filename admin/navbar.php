@@ -15,9 +15,6 @@
             <a class="nav-link" href="..\register.php">REGISTER VOTER</a>
             </li>
             <li class="nav-item active">
-            <a class="nav-link" href="..\charts.php">Live Result</a>
-            </li>
-            <li class="nav-item active">
             <a class="nav-link" href="..\about.php">About</a>
             </li>
             <li class="nav-item dropdown">
