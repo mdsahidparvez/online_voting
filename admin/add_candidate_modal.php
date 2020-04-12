@@ -22,8 +22,8 @@
 								<option>Deputy Mayor</option>
 								<option>Ward Chairperson</option>
 								<option>Member</option>
-								<option>Woman 1</option>
-								<option>Woman 2</option>
+								<option>Woman Member</option>
+								<option>Dalit Woman Member</option>
 							
 							</select>
 					</div>
