@@ -24,11 +24,7 @@
 												<input type = "text" class = "form-control" name = "id_number" value="<?php echo $row1 ['id_number']?>"	>												
 											</div>
 											
-											<div class="form-group">
-	
-												<label>Password</label>
-													<input class="form-control" type ="text" name = "password" id = "pass" required="true" value = "<?php echo $row1 ['password']?>">
-											</div>
+										
 										
 											<div class="form-group">
 												<label>Firstname</label>

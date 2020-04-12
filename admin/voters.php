@@ -50,7 +50,6 @@
                                         <tr>
                                          
                                             <th>ID Number</th>
-                                            <th>Password</th>
                                             <th>Name</th>
                                             <th>Year Level</th>
                                             <th>Status</th>
@@ -72,7 +71,6 @@
                                       
 											<tr>
 												<td><?php echo $row1 ['id_number'];?></td>
-												<td><?php echo $row1 ['password'];?></td>
 												<td><?php echo $row1 ['firstname']." ". $row1 ['lastname'];?></td>
 												<td><?php echo $row1 ['year_level'];?></td>
 												<td><?php echo $row1 ['status'];?></td>
