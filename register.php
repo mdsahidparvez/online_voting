@@ -27,6 +27,7 @@
 				$id_number=$_POST['id_number'];
 				$year_level=$_POST['year_level'];
 				$dob=$_POST['dob'];
+			//	$new_date = date('Y-m-d', strtotime($_POST['dob']));//getting dob from input
 				$pass = $_POST['password'];
 				$password=password_hash($pass,PASSWORD_BCRYPT);//pasword hashing
 
