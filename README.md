@@ -5,6 +5,6 @@
   then you can run the project using XAMPP 
   
     admin details
-    username:admin 
+    username:admin
     password:admin
   
