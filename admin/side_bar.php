@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom:0; background-color:white;height:90px;">
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-bottom:0; background-color:white;height:90px;">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -107,3 +107,5 @@
             </div>
             <!-- /.navbar-static-side -->
         </nav>
+        <div class="container" style="margin-top:80px;">
+        </div>
