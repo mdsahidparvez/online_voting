@@ -5,17 +5,17 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
+            <li class="nav-item  <?php if($page=='home'){echo 'active';}?>">
                 <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item <?php if($page=='voterlist'){echo 'active';}?>">
             <a   class="nav-link" href="voters_list.php" >Voter List</a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item <?php if($page=='registervoter'){echo 'active';}?>">
             <a class="nav-link" href="register.php">REGISTER VOTER</a>
             </li>
           
-            <li class="nav-item active">
+            <li class="nav-item <?php if($page=='about'){echo 'active';}?>">
             <a class="nav-link" href="about.php">About</a>
             </li>
             <li class="nav-item dropdown">
@@ -38,11 +38,11 @@
             
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li class="nav-item active">
+                <li class="nav-item <?php if($page=='voter'){echo 'active';}?>">
                 <a href="voter-login.php" class="nav-link "><i class="fas fa-user" ></i>  Voter</a>
 
                 </li>
-                <li class='nav-item active'>
+                <li class='nav-item <?php if($page=='admin'){echo 'active';}?>'>
                 <a href="admin\index.php" class="nav-link"><i class="fas fa-user" ></i> ADMIN</a>
                 </li>
             </ul>

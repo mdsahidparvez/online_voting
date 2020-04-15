@@ -1,4 +1,4 @@
-<?php include ('head.php');?>
+<?php $page='home'; include ('head.php');?>
 <body>
     
   

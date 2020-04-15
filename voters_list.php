@@ -1,4 +1,4 @@
-<?php include ('head.php');?>
+<?php $page='voterlist'; include ('head.php');?>
 
 <body>
 <?php include ('navbar.php');?>

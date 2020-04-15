@@ -1,4 +1,4 @@
-<?php include ('head2.php');?>
+<?php  $page='admin';include ('head2.php');?>
 
 
 <body >

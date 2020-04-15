@@ -7,6 +7,17 @@ body{
    background-image:url(../pictures/ccc.jpg);
    background-size: cover;
 }
+ul .active{
+    background-color: #000 !important;
+
+}
+ul .active a{
+    
+        color: white !important;
+        border-bottom: 4px solid red;
+
+    
+}
 a{
     text-decoration: none !important;
     color: white;
@@ -62,6 +73,7 @@ h1 a:hover{
     font-family: 'Varela Round', sans-serif;
     text-transform: uppercase;
     margin-left:10px;
+    margin-right: 10px;
     height: 40px;
     color: black !important;
 }
