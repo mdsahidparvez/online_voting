@@ -55,7 +55,23 @@
 											<img src="../register/<?php echo $row1 ['img']?>" style="width:300px;height:300px;" onclick="window.open(this.src)" alt="">
 											
 											</div>
-											
+											<div class="form-group">
+												<label>Mobile </label>
+													<input class="form-control"  type = "number" name = "mobile" value = "<?php echo $row1 ['mobile']?>" required="true">
+											</div>
+
+											<div class="form-group">
+												<label>Ward</label>
+													<select class = "form-control" name = "ward"  required="true">
+														<option><?php echo $row1 ['ward']?></option>
+														<option>1</option>
+														<option>2</option>
+														<option>3</option>
+														<option>4</option>
+														
+													</select>
+											</div>
+
 											
 											<div class="form-group">
 												<label>Account</label>
