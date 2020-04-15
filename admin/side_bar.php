@@ -67,7 +67,7 @@
                                 
                             </ul>
 						<li>
-                            <a href="#" style="background-color:#056; color:white;"><i class="fa fa-users"></i> Manage Voters<span class="fa arrow"></span></a>
+                            <a href="#" style="background-color:#056; color:white;"><i class="fa fa-users"></i> Manage Voters</a>
                             <ul class="nav nav-second-level">
                                 <li>
                                     <a href="voters.php"><i class = "fa fa-user fa-fw"></i> View Voters</a>
