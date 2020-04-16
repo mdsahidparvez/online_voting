@@ -25,6 +25,7 @@
 				$firstname=$_POST['firstname'];
 				$lastname=$_POST['lastname'];
 				$mobile=$_POST['mobile'];
+				$email=$_POST['email'];
 				$id_number=$_POST['id_number'];
 				$year_level=$_POST['year_level'];
 				$dob=$_POST['dob'];
@@ -59,7 +60,7 @@
 					
 				}
 				else{
-					$conn->query("insert into voters(id_number, password, firstname,lastname,year_level,status,img,ward,dob,mobile) VALUES('$id_number', '$password','$firstname','$lastname','$year_level','Unvoted','$location','$ward','$dob','$mobile')");
+					$conn->query("insert into voters(id_number, password, firstname,lastname,year_level,status,img,ward,dob,mobile,email) VALUES('$id_number', '$password','$firstname','$lastname','$year_level','Unvoted','$location','$ward','$dob','$mobile','$email')");
 					
 					echo "<h2><p class=\"alert-success text-center\" ><strong>SUCCESS!</strong> Your form is successfully submitted for verification.<br>Check voter list within 5 days </p></h2>";
 								
