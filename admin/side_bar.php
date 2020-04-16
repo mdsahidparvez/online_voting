@@ -54,6 +54,8 @@
                             <a href="candidate.php" style="background-color:black; color:white; font-size:30px;text-align:center;height:90px; line-height:60px;">Admin Panel </a>
                         </li>
                         <li>
+                            <a href="testingemail.php" style="background-color:#025;color:white;font-size:20px;text-align:center;"><i class="fas fa-envelope"></i> EMAIL</a>
+                        </li>
                             
                         <li>
                             <a href="candidate.php" style="background-color:#045;color:white;font-size:20px;"><i class = "fa fa-user fa-fw"></i> Manage Candidates</a>
