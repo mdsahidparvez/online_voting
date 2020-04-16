@@ -5,8 +5,10 @@
 <body>
     <div id="wrapper">
         <?php include ('side_bar.php');?>
-        <div id="page-wrapper" style="margin-top:19px;">
 
+        <div id="page-wrapper" style="margin-top:19px;">
+        <div class="text-center"><i style="font-size:100px;color:darkblue;" class="fas fa-envelope"></i></div>
+                                
 
             <?php 
                 require 'dbcon.php';
@@ -34,7 +36,7 @@
 
 
 
-            <div class="container col-md-6" style="background-color:white;padding:50px;">
+            <div class="container col-md-6" style="background-color:white;padding:5px;">
                 <div class="text-center" style="padding:50px;"><h2>Send Email to all voters</h2></div>
                 <form class="text-center"  method="post">
                     <!--<div class="form-group"><label for="">Enter email</label>
@@ -71,14 +73,14 @@
                 $headers = $_POST['header'];
 
                 if (mail($to_email, $subject, $body, $headers)) {
-                    echo "<h2><p class=\"alert-success text-center\" ><strong>ERROR!</strong>Email successfully sent to $to_email...</p></h2>";
+                    echo "<h2><p class=\"alert-success text-center\" ><strong>SUCCESS!</strong>Email successfully sent to $to_email...</p></h2>";
                 } else {
                     echo "<h2><p class=\"alert-danger text-center\" ><strong>ERROR!</strong> Email sending failed </p></h2>";					
 
                 }
             }
          ?>
-            <div class="container col-md-6" style="background-color:white;padding:50px;">
+            <div class="container col-md-6" style="background-color:white;padding:5px;">
                 <div class="text-center" style="padding:50px;"><h2>Send Email to specific</h2></div>
                 <form class="text-center"  method="post">
                     <div class="form-group"><label for="">Email</label>
