@@ -109,6 +109,10 @@
 												<label>Mobile </label>
 													<input class="form-control"  type = "number" name = "mobile" placeholder="enter your mobile number" required="true">
 											</div>
+											<div class="form-group">
+												<label>Email address </label>
+													<input class="form-control"  type = "email" name = "email" placeholder="enter your email address" required="true">
+											</div>
 
 
 											<div class="form-group">
