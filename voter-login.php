@@ -1,4 +1,4 @@
-<?php include ('head.php');?>
+<?php  $page='voter';include ('head.php');?>
 <body>
     
     <div class="container login-box col-md-3" id="login-box">

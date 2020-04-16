@@ -54,6 +54,8 @@
                             <a href="candidate.php" style="background-color:black; color:white; font-size:30px;text-align:center;height:90px; line-height:60px;">Admin Panel </a>
                         </li>
                         <li>
+                            <a href="testingemail.php" style="background-color:#025;color:white;font-size:20px;text-align:center;"><i class="fas fa-envelope"></i> EMAIL</a>
+                        </li>
                             
                         <li>
                             <a href="candidate.php" style="background-color:#045;color:white;font-size:20px;"><i class = "fa fa-user fa-fw"></i> Manage Candidates</a>
@@ -67,7 +69,7 @@
                                 
                             </ul>
 						<li>
-                            <a href="#" style="background-color:#056; color:white;"><i class="fa fa-users"></i> Manage Voters<span class="fa arrow"></span></a>
+                            <a href="#" style="background-color:#056; color:white;"><i class="fa fa-users"></i> Manage Voters</a>
                             <ul class="nav nav-second-level">
                                 <li>
                                     <a href="voters.php"><i class = "fa fa-user fa-fw"></i> View Voters</a>

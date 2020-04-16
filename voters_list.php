@@ -1,15 +1,15 @@
-<?php include ('head.php');?>
+<?php $page='voterlist'; include ('head.php');?>
 
 <body>
 <?php include ('navbar.php');?>
 
-    <div id="wrapper" style="margin-top:70px; background-color:white;">
+    <div id="wrapper" style="margin-top:80px; background-color:white;">
 
 
         <!-- Page Content -->
         <div id="page-wrapper">
             <div class="row">
-                <div class="col-md-12 " style="background-color:#098;">
+                <div class="col-md-12 " style="background-color:#098;color:white;">
                     <h3 class="text-center " >Voters List </h3>
                 </div>
 				 

@@ -24,9 +24,8 @@
     <link href="..\css\mystyle.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <script src="https://kit.fontawesome.com/2231328f8b.js"></script>
-
+    <link rel="stylesheet" type="text/css" href="..\css\fontawesome\all.css">
+    <script src="..\css\fontawesome\all.js"></script>
 
     
 </head

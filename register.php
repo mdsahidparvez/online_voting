@@ -1,4 +1,4 @@
-<?php include ('head.php');?>
+<?php  $page='registervoter'; include ('head.php');?>
 <body>
 <?php include ('navbar.php');?>
 
@@ -24,6 +24,8 @@
 			if (isset($_POST['save'])){
 				$firstname=$_POST['firstname'];
 				$lastname=$_POST['lastname'];
+				$mobile=$_POST['mobile'];
+				$email=$_POST['email'];
 				$id_number=$_POST['id_number'];
 				$year_level=$_POST['year_level'];
 				$dob=$_POST['dob'];
@@ -52,8 +54,13 @@
 					echo "<h2><p class=\"alert-danger text-center\" ><strong>ERROR!</strong> Password must be atleast 8 character long </p></h2>";					
 					
 				}
+				elseif (strlen($mobile)!=10) {
+
+					echo "<h2><p class=\"alert-danger text-center\" ><strong>ERROR!</strong> Mobile number must be 10 digit </p></h2>";					
+					
+				}
 				else{
-					$conn->query("insert into voters(id_number, password, firstname,lastname,year_level,status,img,ward,dob) VALUES('$id_number', '$password','$firstname','$lastname','$year_level','Unvoted','$location','$ward','$dob')");
+					$conn->query("insert into voters(id_number, password, firstname,lastname,year_level,status,img,ward,dob,mobile,email) VALUES('$id_number', '$password','$firstname','$lastname','$year_level','Unvoted','$location','$ward','$dob','$mobile','$email')");
 					
 					echo "<h2><p class=\"alert-success text-center\" ><strong>SUCCESS!</strong> Your form is successfully submitted for verification.<br>Check voter list within 5 days </p></h2>";
 								
@@ -87,7 +94,7 @@
 													$change =  passFunc(8, 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890');
 											?>	
 												<label>Password</label>
-													<input class="form-control"  type = "text" name = "password" id = "pass" required="true" autocomplete="off" />
+													<input class="form-control"  type = "text" placeholder="minimum 8 character" name = "password" id = "pass" required="true" autocomplete="off" />
 													<input type = "button" value = "Generate" onclick = "document.getElementById('pass').value = '<?php echo $change?>'">
 											</div>
 											
@@ -99,6 +106,15 @@
 												<label>Lastname</label>
 													<input class="form-control"  type = "text" name = "lastname" placeholder="Please enter lastname" required="true">
 											</div>
+											<div class="form-group">
+												<label>Mobile </label>
+													<input class="form-control"  type = "number" name = "mobile" placeholder="enter your mobile number" required="true">
+											</div>
+											<div class="form-group">
+												<label>Email address </label>
+													<input class="form-control"  type = "email" name = "email" placeholder="enter your email address" required="true">
+											</div>
+
 
 											<div class="form-group">
 												<label>Citizenship Photo</label>
