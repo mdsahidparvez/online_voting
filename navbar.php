@@ -24,10 +24,10 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="testing/mayor_result.php">Mayor and Deputy Mayor</a>
-                <a class="dropdown-item" href="#">WARD 1</a>
-                <a class="dropdown-item" href="#">WARD 2</a>
-                <a class="dropdown-item" href="#">WARD 3</a>
-                <a class="dropdown-item" href="#">WARD 4</a>
+                <a class="dropdown-item" href="testing/ward1_result.php">WARD 1</a>
+                <a class="dropdown-item" href="testing/ward2_result.php">WARD 2</a>
+                <a class="dropdown-item" href="testing/ward3_result.php">WARD 3</a>
+                <a class="dropdown-item" href="testing/ward4_result.php">WARD 4</a>
 
 
 
