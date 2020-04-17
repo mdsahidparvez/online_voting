@@ -117,7 +117,7 @@
 			?>
 			</div>
 			<div class = "alert alert-success" >
-			<label>VICE PRESIDENT FOR INTERNAL AFFAIRS</label>
+			<label>Deputy Mayor</label>
 			<br />
 			<?php
 				if(!$_SESSION['vpinternal_id'])
@@ -132,7 +132,7 @@
 			?>
 			</div>
 			<div class = "alert alert-info">
-			<label>VICE PRESIDENT FOR EXTERNAL AFFAIRS</label>
+			<label>Ward Chairperson</label>
 			<br/>
 			<?php
 				if(!$_SESSION['vpexternal_id'])
@@ -148,7 +148,7 @@
 				
 			</div>
 			<div class = "alert alert-success" >
-			<label>SECRETARY</label>
+			<label>Member</label>
 			<br />
 			<?php
 				if(!$_SESSION['secretary_id'])
@@ -165,7 +165,7 @@
 			</div>
 			<div class = "alert alert-info">
 			
-			<label>AUDITOR</label>
+			<label>Woman Member</label>
 			<br />
 			<?php
 				if(!$_SESSION['auditor_id'])
@@ -181,7 +181,7 @@
 			
 			</div>
 			<div class = "alert alert-success">
-			<label>TREASURER</label>
+			<label>Dalit Woman Member</label>
 			<br />
 			<?php
 				if(!$_SESSION['treasurer_id'])
@@ -196,7 +196,7 @@
 			?>
 			
 			</div>
-			<div class = "alert alert-info" >
+	<!--		<div class = "alert alert-info" >
 			<label>PIO</label>
 			<br />
 			<?php
@@ -275,7 +275,7 @@
 			?>
 			
 			</div>
-			<br />
+		-->	<br />
 			<button type = "submit" data-toggle = "modal" data-target = "#result" class = "btn btn-success" >Submit Final Vote</button>
 		</div>
 	</center>
