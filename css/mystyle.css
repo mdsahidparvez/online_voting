@@ -4,21 +4,63 @@
 body{
    
    background-color: #262626;
-   background-image:url(../pictures/ccc.jpg);
+   background-image:url(../pictures/ccc-01.jpg);
    background-size: cover;
+   background-attachment: fixed;
+   background-position: center;
 }
 
+.main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly; 
+    margin-top:150px ;
+
+    
+}
+.maincont{
+    font-family: roboto;
+    padding: 20px;
+}
+.c1 a,.c2 a{
+    box-shadow: 0px 0px 5px lightgreen;
+    background-color:rgb(0, 255, 0);
+    font-size: 20px;
+ padding: 20px 60px;
+    text-align: center;
+    border-radius: 50px;
+    color:black;
+    font-weight: bolder;
+}
+.c2 a{
+    background-color: rgb(0, 174, 243);
+    box-shadow: 0px 0px 5px skyblue;
+
+}
+.c1 a:hover{
+    box-shadow: 0px 0px 15px rgb(0, 255, 0);
+   
+}
+.c2 a:hover{
+    box-shadow: 0px 0px 15px rgb(0, 174, 243);
+   
+}
+.nav-link:hover{
+   
+    border-bottom: 3px solid yellow;
+    
+    transition: 0.2s;
+    }
 ul .active a{
     
-        color: black !important;
-        border-bottom: 4px solid red;
-
-        border-top: 4px solid red;
+        color: white !important;
+        border-bottom: 3px solid yellow;
+        
 
 }
 a{
     text-decoration: none !important;
-    color: white;
+    color: black;
 
     
 }
@@ -27,32 +69,59 @@ h1 a:hover{
     text-shadow: 0px 0px 10px white;
 }
 
-.maincont{
-    background-color: white;
-    padding: 50px;
-    height: 50vh ;
+
+.fixed-top.scrolled {
+    background-color: #494949 !important;
+    transition: background-color 200ms linear;
+}
+
+@media only screen and (max-width: 700px)
+{
+
+
+    body{
+   
+        background-color: #262626;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: unset;
+     }
+
+    .navbar-collapse{
+        background-color: black;
+        text-align: center;
+
+    }
+    .nav-item{
+        width: auto;
+        margin: auto;
+
+    }
+    ul .active a{
     
+        color: white !important;
+        border-bottom: 3px solid yellow;
+    }
+	
 }
-.carousel-inner {
-    height: 350px!important;
-    margin-top: 70px !important;
-}
+
 .navbar{
-    background-color: white !important;
+
+    background-color: transparent !important;
 }
 
 .countdown{
-    background-color: white;
     color:red;
-    border: 5px solid rgb(10, 223, 252);
+    text-shadow: 0px 0px 5px white;;
+    background-color: white;
     width: 200px;
-    height:100px;
-    border-radius: 20px;
+    height:auto;
+    font-weight: bolder;
     text-align: center;
     padding: 10px;
-    margin-right: 50px;
-    font-size: 20px;
-    margin-top: -390px;
+    margin-right: 60px;
+    font-size: 30px;
+    margin-top: -450px;
 }
 .now{
     text-shadow: 0px 0px 20px blue;
@@ -65,6 +134,7 @@ h1 a:hover{
     font-weight: bolder;
     margin-top: -400px;
 }
+
 .nav-item a {
     font-size: 15px;
     font-weight: bolder;
@@ -73,15 +143,12 @@ h1 a:hover{
     margin-left:10px;
     margin-right: 10px;
     height: 40px;
-    color: black !important;
+    color: white !important;
 }
-.nav-link:hover{
-   
-border-bottom: 4px solid red;
-border-top: 4px solid red;
+.dropdown-menu a{
+    color:black !important;
+}
 
-transition: 0.2s;
-}
 
 .navbar-nav{
     margin:auto;

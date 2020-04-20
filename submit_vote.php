@@ -8,17 +8,17 @@
 	$iv = openssl_random_pseudo_bytes(openssl_cipher_iv_length('aes-256-cbc')); 
 	$encrypted = openssl_encrypt($data, 'aes-256-cbc', $encryption_key, 0, $iv);
 	return base64_encode($encrypted . '::' . $iv); }///end encryption function
-	$pres_id=$_SESSION[pres_id];
+	$pres_id=$_SESSION['pres_id'];
 	$pres_id=encryptthis($pres_id,$key);
-	$vpinternal_id=$_SESSION[vpinternal_id];
+	$vpinternal_id=$_SESSION['vpinternal_id'];
 	$vpinternal_id=encryptthis($vpinternal_id,$key);
-	$vpexternal_id=$_SESSION[vpexternal_id];
+	$vpexternal_id=$_SESSION['vpexternal_id'];
 	$vpexternal_id=encryptthis($vpexternal_id,$key);
-	$secretary_id=$_SESSION[secretary_id];
+	$secretary_id=$_SESSION['secretary_id'];
 	$secretary_id=encryptthis($secretary_id,$key);
-	$auditor_id=$_SESSION[auditor_id];
+	$auditor_id=$_SESSION['auditor_id'];
 	$auditor_id=encryptthis($auditor_id,$key);
-	$treasurer_id=$_SESSION[treasurer_id];
+	$treasurer_id=$_SESSION['treasurer_id'];
 	$treasurer_id=encryptthis($treasurer_id,$key);
 	
 	

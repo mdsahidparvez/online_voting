@@ -1,20 +1,19 @@
 <?php $page='voterlist'; include ('head.php');?>
 
 <body>
-<?php include ('navbar.php');?>
+    <?php include ('navbar.php');?>
 
-    <div id="wrapper" style="margin-top:80px; background-color:white;">
+    <div class="container-fluid" style="margin-top:90px; background-color:white; padding:40px;">
 
 
         <!-- Page Content -->
         <div id="page-wrapper">
             <div class="row">
-                <div class="col-md-12 " style="background-color:#098;color:white;">
-                    <h3 class="text-center " >Voters List </h3>
+                <div class="col-md-12 text-center" style="font-size:40px; " >
+                     <p>Voters List</p> 
                 </div>
 				 
-                 <div class="container col-md-3 text-center" style="margin-top:100px;" ><img width=200 height=200 src="pictures\test-512.png" alt=""></div>
-                    <div class="container col-md-3 " style="position:absolute;margin-top:60px;margin:50px;color:blue;"><h1> <i class="fas fa-search"></i>voter id</h1><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for ID no."></div>
+                    <div class="container col-md-3 text-center " style="position:relative;margin-top:60px;color:blue;"><h3> <i class="fas fa-search"></i>voter id</h3><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for ID no."></div>
 				
                     <div class="container col-md-6 " >
                         
@@ -63,7 +62,7 @@
                         </div>
                         <!-- /.panel-body -->
                     </div>
-                    <div class="container col-md-3 text-center"  style="background-color:white;color:black;padding:100px;  " ><h4>Name not in Voter list?<br><h6>Please register or contact admin</h5></h6></div>
+                    <div class="container col-md-3 text-center"  style="background-color:white;color:black;padding:5px;  " ><h4>Name not in Voter list?<br><h6>Please register or contact admin</h5></h6></div>
 
                     <!-- /.panel -->
               

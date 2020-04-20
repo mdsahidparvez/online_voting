@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Online Voting System PSITS</title>
+    <title>Online Voting System</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -26,6 +26,14 @@
     <!-- Custom Fonts -->
     <link rel="stylesheet" type="text/css" href="css\fontawesome\all.css">
     <script src="css\fontawesome\all.js"></script>
+    <script>
+        $(function () {
+  $(document).scroll(function () {
+    var $nav = $(".fixed-top");
+    $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+  });
+});
+    </script>
     
 </head
 

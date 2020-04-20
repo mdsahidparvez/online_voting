@@ -12,7 +12,7 @@
       
 
             <ul class="nav navbar-top-links navbar-right">
-            <a   href="logout.php" style = "color: white; background-color:#f55;padding:10px;">
+            <a   href="logout.php" style = "color: white; background-color:#f55;padding:10px;margin-right:20px;">
 					Logout
                           
                     </a>
@@ -51,7 +51,9 @@
                     <ul class="nav" id="side-menu">
                         
                         <li>
-                            <a href="candidate.php" style="background-color:black; color:white; font-size:30px;text-align:center;height:90px; line-height:60px;">Admin Panel </a>
+                        <a href="candidate.php" style="background-color:white; color:#023; font-size:40px;text-align:center;height:50px; line-height:30px;">Admin </a>
+
+                            <a href="candidate.php" style="background-color:white; color:#023; font-size:80px;text-align:center;height:90px; line-height:60px;"><i class="fas fa-user-cog"></i> </a>
                         </li>
                         <li>
                             <a href="testingemail.php" style="background-color:#025;color:white;font-size:20px;text-align:center;"><i class="fas fa-envelope"></i> EMAIL</a>

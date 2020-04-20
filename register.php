@@ -16,7 +16,7 @@
 		} 
 		
 ?>
-    <div class ="container" id="wrapper" style="background-color:white; margin-top:70px;padding:20px;">
+    <div class ="container-fluid" id="wrapper" style="background-color:white; margin-top:90px;padding:50px;">
 	
 		<?php 	//////////////////FORM VALIDATION
 			require 'register/dbcon.php';
@@ -71,8 +71,8 @@
         <!-- Page Content -->
         <div>
             <div class="row">
-                <div class="container text-center">
-                    <h3>Voter Registration Form</h3>
+                <div class="container text-center" style="font-size:40px;">
+                    Voter Registration Form
                 </div>
                 <br><br><br>
 				<div class = "container col-md-6">

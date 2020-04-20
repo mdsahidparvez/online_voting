@@ -5,58 +5,20 @@
             
     <?php include ('navbar.php');?>
 
-    <div class="  countdown float-right"><h6>Voting Ends in</h6><p  id="demo"></p></div>
     <?php include ('script.php');?>
-
-
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-        <img class="d-block w-100" src="pictures\as.jpg" alt="First slide">
+    <div class="container main" >
+        <div class="c1">
+           <a href="voter-login.php">VOTE</a> 
         </div>
-        <div class="carousel-item">
-        <img class="d-block w-100" src="https://www.suwanee.com/Home/ShowPublishedImage/1122/636585425989330000" alt="Second slide">
-        </div>
-        <div class="carousel-item">
-        <img class="d-block w-100" src="pictures\fff.jpg" alt="Third slide">
+        <div class="c2">
+          <a href="register.php">Register</a> 
+
         </div>
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
-    </div>
 
-
-    <div class="container-fluid maincont">
-        <div class="  text-center" style="color:red;padding:20px;"><h3>Online Voting System for MUNICIPALITY</h3></div>
-        <div class="row">
-            <div class="text-center col-md-4">
-                <h1>Are you ready to Vote ?</h1>
-            </div>
-            <div class="col-md-4 " style="text-align:center;background-color:#000;color:white;padding:10px;">
-                <h1><a href="voter-login.php"><i class="fas fa-sign-in-alt"></i> Login to vote</a></h1>
-                <h6>If you are already registered</h6>
-
-            </div>
-            <div class="col-md-4 " style="text-align:center;background-color:#00e;color:white;padding:10px;">
-                <h1><a href="register.php">Register now </a></h1>
-
-            </div>
-
-        </div>
-
-
-    </div>
+  
+        
+      
 </body>
 
 
@@ -97,5 +59,6 @@ var x = setInterval(function() {
 
 
 </script>
+
 
 </html>
