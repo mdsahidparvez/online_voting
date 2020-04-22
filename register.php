@@ -27,7 +27,6 @@
 				$mobile=$_POST['mobile'];
 				$email=$_POST['email'];
 				$id_number=$_POST['id_number'];
-				$year_level=$_POST['year_level'];
 				$dob=$_POST['dob'];
 			//	$new_date = date('Y-m-d', strtotime($_POST['dob']));//getting dob from input
 				$pass = $_POST['password'];
@@ -60,7 +59,7 @@
 					
 				}
 				else{
-					$conn->query("insert into voters(id_number, password, firstname,lastname,year_level,status,img,ward,dob,mobile,email) VALUES('$id_number', '$password','$firstname','$lastname','$year_level','Unvoted','$location','$ward','$dob','$mobile','$email')");
+					$conn->query("insert into voters(id_number, password, firstname,lastname,status,img,ward,dob,mobile,email) VALUES('$id_number', '$password','$firstname','$lastname','Unvoted','$location','$ward','$dob','$mobile','$email')");
 					
 					echo "<h2><p class=\"alert-success text-center\" ><strong>SUCCESS!</strong> Your form is successfully submitted for verification.<br>Check voter list within 5 days </p></h2>";
 								
@@ -125,17 +124,7 @@
 												<input type="date" id="" name="dob" required >
 											</div>
 											
-											<div class="form-group">
-												<label>Year_Level</label>
-													<select class = "form-control" name = "year_level" required>
-														<option></option>
-														<option>1st Year</option>
-														<option>2nd Year</option>
-														<option>3rd Year</option>
-														<option>4th Year</option>
-														
-													</select>
-											</div>
+											
 											<div class="form-group">
 												<label>Ward</label>
 													<select class = "form-control" name = "ward"  required="true">
