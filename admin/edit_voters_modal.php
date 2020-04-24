@@ -35,8 +35,8 @@
 													<input class="form-control"  type = "text" name = "lastname" value = "<?php echo $row1 ['lastname']?>" required="true">
 											</div>
 											
-											<div class="form-group">
-												<label>Year_Level</label>
+											<!--<div class="form-group">
+												<label>Municipality</label>
 													<select class = "form-control" name = "year_level" required="true">
 														<option><?php echo $row1 ['year_level']?></option>
 														<option></option>
@@ -49,7 +49,7 @@
 														
 													
 													</select>
-											</div>
+											</div>	-->
 											<div class="form-group">
 											<a href="../register/<?php echo $row1 ['img']?>">Citizenship Photo</a>
 											<img src="../register/<?php echo $row1 ['img']?>" style="width:300px;height:300px;" onclick="window.open(this.src)" alt="">
@@ -58,6 +58,10 @@
 											<div class="form-group">
 												<label>Mobile </label>
 													<input class="form-control"  type = "number" name = "mobile" value = "<?php echo $row1 ['mobile']?>" required="true">
+											</div>
+											<div class="form-group">
+												<label>Email </label>
+													<input class="form-control"  type = "email" name = "mobile" value = "<?php echo $row1 ['email']?>" required="true">
 											</div>
 
 											<div class="form-group">

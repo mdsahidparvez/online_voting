@@ -52,14 +52,14 @@
 					</div>
 					
 					<div class="form-group">
-						<label>Year_Level</label>
-							<select class = "form-control" name = "year_level" required="true">
-								<option><?php echo $row ['year_level']?></option>
-								<option></option>
-								<option>1st Year</option>
-								<option>2nd Year</option>
-								<option>3rd Year</option>
-								<option>4th Year</option>
+						<label>Party Name</label>
+							<select class = "form-control" name = "party_name" required="true">
+								<option><?php echo $row ['party_name']?></option>
+								<option>Individual</option>
+								<option>Nepal Communist Party</option>
+								<option>Nepali Congress</option>
+								<option>Rastriya Janata Party</option>
+								<option>Samajbadi Party</option>
 							</select>
 					</div>
 					
@@ -79,7 +79,7 @@
 					<div class="form-group">
 						<label>Ward</label>
 							<select class = "form-control" name = "ward">
-								<option></option>
+								<option><?php echo $row ['ward']?></option>
 								<option>1</option>
 								<option>2</option>
 								<option>3</option>

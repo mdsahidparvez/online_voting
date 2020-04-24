@@ -51,9 +51,10 @@
                                          
                                             <th>ID Number</th>
                                             <th>Name</th>
-                                            <th>Year Level</th>
                                             <th>Status</th>
                                             <th>Account</th>
+                                            <th>Mobile</th>
+                                            <th>Email</th>
                                             <th>Verification</th>
                                             <th>ward</th>
                                             
@@ -72,9 +73,13 @@
 											<tr>
 												<td><?php echo $row1 ['id_number'];?></td>
 												<td><?php echo $row1 ['firstname']." ". $row1 ['lastname'];?></td>
-												<td><?php echo $row1 ['year_level'];?></td>
 												<td><?php echo $row1 ['status'];?></td>
 												<td><?php echo $row1 ['account'];?></td>
+                                                <td><?php echo $row1 ['mobile'];?></td>
+
+                                                <td><?php echo $row1 ['email'];?></td>
+
+
                                                 <td> <a rel="tooltip"  title="Edit" id="<?php echo $row['voters_id'] ?>" href="#edit_voters<?php echo $row1['voters_id'] ?>"  data-toggle="modal"class="btn btn-success btn-outline"> Edit</a></td>
                                                 <td><?php echo $row1 ['ward'];?></td>
 

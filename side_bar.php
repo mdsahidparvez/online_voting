@@ -6,8 +6,8 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#"><img src="pictures\logo.png" width="200px;" height="50px;" alt=""> </a>
-                <div class="container" style="margin-left:80%;font-size:30px;float:left;width:400px;"> Vote For The BEST</div>
+                <a class="navbar-brand" href="#">HAMRO VOTE</a>
+                <div class="container text-center" style="margin-left:80%;font-size:30px;float:left;width:400px;"> Vote For The BEST</div>
             
             </div>
       

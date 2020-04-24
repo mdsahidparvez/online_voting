@@ -8,6 +8,5 @@
 		$session_id=$_SESSION['voters_id'];
 		$user_query = $conn->query("SELECT * FROM user WHERE user_id = '$session_id'") or die(mysqli_errno());
 		$user_row = $user_query->fetch_array();
-		$user_username = $user_row['firstname']." ".$user_row['lastname'];
 	}
 ?>
