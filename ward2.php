@@ -5,7 +5,7 @@
         <?php include ('side_bar.php');?>
     </div>
 	<form method = "POST" action = "vote_result.php">
-    <div class='container ' style="background-color:white; text-align:center;"><h3>WARD : <?php echo $row['ward'];?></h3></div>
+    	<div class='container ' style="background-color:white; text-align:center;"><h3>WARD : <?php echo $row['ward'];?></h3></div>
 		<div class="col-lg-6">
 	
                     <div class="panel panel-primary">
@@ -28,7 +28,7 @@
 							<img src = "admin/<?php echo $fetch['img']?>" style ="border-radius:6px;" height = "150px" width = "150px" class = "img">
 							
 							<center><button type="button" class="btn btn-primary btn-xs" style="margin-top:-90px;"><?php echo $fetch['firstname']." ".$fetch['lastname']?></button></center>
-							<center><input  style="transform:scale(3);margin-top:-100px;position:absolute;"type = "checkbox" value = "<?php echo $fetch['candidate_id'] ?>" name = "pres_id" class = "president"></center>
+							<center><input type = "checkbox" value = "<?php echo $fetch['candidate_id'] ?>" name = "pres_id" class = "president"></center>
 							</div>
                             
 	
@@ -57,7 +57,7 @@
 		<div id = "position">
 			<img class = "image-rounded" src = "admin/<?php echo $fetch['img']?>"style ="border-radius:6px;" height = "150px" width = "150px">
 		<center><button type="button" class="btn btn-primary btn-xs" style="margin-top:-90px;"><?php echo $fetch['firstname']." ".$fetch['lastname']?></button></center>
-			<center><input type = "checkbox" style="transform:scale(3);margin-top:-100px;position:absolute;" value = "<?php echo $fetch['candidate_id'] ?>" name = "vpinternal_id" class = "vpinternal"></center>
+			<center><input type = "checkbox"  value = "<?php echo $fetch['candidate_id'] ?>" name = "vpinternal_id" class = "vpinternal"></center>
 		</div>
 						<?php
 							}

@@ -7,7 +7,6 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="#">HAMRO VOTE</a>
-                <div class="container text-center" style="margin-left:80%;font-size:30px;float:left;width:400px;"> Vote For The BEST</div>
             
             </div>
       
@@ -21,13 +20,21 @@
 					$row = $query->fetch_array();
 				?>
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" style = "color:black;font-size:14pt;">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" >
 						Welcome: <?php echo $row['firstname']." ".$row['lastname'];?><br>
                         Your ward: <?php echo $row['ward'];?>
 
 					</a>
-                 
-                    <a  style="color:white; font-size:20px;background-color:#f66;width:100px;padding:10px;float:right;margin-right:10px;" href="logout.php">Logout</a>
+
                 </li>
+               
             </ul>
-            
+            <ul class="nav navbar-top-links navbar-right">
+            <li class="dropdown">
+                    
+                    <a  style="color:white; font-size:20px;background-color:#f66;width:100px;padding:10px;text-align:center;" href="logout.php">Logout</a>
+
+                </li>
+               
+            </ul>
+</nav>
