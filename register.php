@@ -30,7 +30,14 @@
 				$email=$_POST['email'];
 				$id_number=$_POST['id_number'];
 				$dob=$_POST['dob'];
+				
+				
+				$today=date("Y-m-d");
+				$diff=date_diff(date_create($dob),date_create($today));
+				$age=$diff->format('%y');
 			//	$new_date = date('Y-m-d', strtotime($_POST['dob']));//getting dob from input
+				
+				
 				$pass = $_POST['password'];
 				$password=password_hash($pass,PASSWORD_BCRYPT);//pasword hashing
 
@@ -49,6 +56,10 @@
 				
 					echo "<h2><p class=\"alert-danger text-center\" ><strong>ERROR!</strong> ID already exists</p></h2>";					
 				
+				}
+				elseif ($age<18){
+					echo "<h2><p class=\"alert-danger text-center\" ><strong>ERROR!</strong> Age below 18 are not allowed to vote </p></h2>";					
+
 				}
 				elseif (strlen($pass)<8) {
 
