@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-bottom:0; background-color:black;height:90px;">
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-bottom:0; background-color:#0866D1;height:90px;">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -24,7 +24,7 @@
 				
 			 ?>
                 <li class="dropdown">
-				<img src="<?php echo $row ['img']?>" style="width:70px;height:70px;border-radius:100%;" onclick="window.open(this.src)" alt="">
+				<img src="<?php echo $row ['img']?>" style="width:50px;height:50px;border-radius:100%;" onclick="window.open(this.src)" alt="">
 											
 											
                     </a>

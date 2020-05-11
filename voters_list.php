@@ -3,7 +3,7 @@
 <body>
     <?php include ('navbar.php');?>
 
-    <div class="container-fluid" style="margin-top:90px; background-color:white; padding:40px;">
+    <div class="container-fluid" style="margin-top:60px; background-color:white; padding:40px;">
 
 
         <!-- Page Content -->

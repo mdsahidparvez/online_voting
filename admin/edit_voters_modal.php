@@ -61,7 +61,7 @@
 											</div>
 											<div class="form-group">
 												<label>Email </label>
-													<input class="form-control"  type = "email" name = "mobile" value = "<?php echo $row1 ['email']?>" required="true">
+													<input class="form-control"  type = "email" name = "email" value = "<?php echo $row1 ['email']?>" required="true">
 											</div>
 
 											<div class="form-group">

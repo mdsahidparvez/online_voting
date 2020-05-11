@@ -17,7 +17,7 @@
 		} 
 		
 ?>
-    <div class ="container-fluid" id="wrapper" style="background-color:#0008; margin-top:90px;padding:50px;">
+    <div class ="container-fluid" id="wrapper" style="background-color:#0008; margin-top:60px;padding:50px;">
 		<div class ="container col-md-8" id="wrapper" style="background-color:white;padding:50px; ">
 
 		<?php 	//////////////////FORM VALIDATION

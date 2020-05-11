@@ -2,7 +2,7 @@
 
 <body>
 <?php include ('navbar.php');?>
-    <div class="container-fluid text-center" style="margin-top:90px;background-color:rgba(26, 26, 26, 0.9);padding:50px;color:#ddd;height:100vh;">
+    <div class="container-fluid text-center" style="margin-top:60px;background-color:rgba(26, 26, 26, 0.9);padding:50px;color:#ddd;height:100vh;">
 
 
             <div class="container text-center" style="color:white;font-size:40px; ">

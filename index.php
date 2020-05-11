@@ -6,7 +6,7 @@
     <?php include ('navbar.php');?>
 
     <?php include ('script.php');?>
-    <div class="container main" >
+    <div class="container-fluid main" >
         <div class="c1">
            <a href="voter-login.php">VOTE</a> 
         </div>
