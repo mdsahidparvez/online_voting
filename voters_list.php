@@ -20,7 +20,7 @@
                         <!-- /.panel-heading -->
                         <div class="panel-body">
                             <div class="">
-                                <table id="myTable" class="table table-striped table-bordered table-hover" >
+                                <table id="myTable" class="table table-striped table-bordered table-hover table-dark" >
                                     <thead>
                                         <tr>
                                          

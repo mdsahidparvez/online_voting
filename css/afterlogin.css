@@ -1,46 +1,42 @@
-#position img{
-    border-radius: 100% !important;
-    border:2px solid black;
-    box-sizing: border-box;
- 
+#position img {
+  border-radius: 100% !important;
+  border: 2px solid black;
+  box-sizing: border-box;
 }
 
-#position:hover{
-    background-color: rgba(5, 224, 60, 0.333);
-    transition:  0.1s ease-in-out;
-    border-right: 5px solid red;
+#position:hover {
+  background-color: rgba(5, 224, 60, 0.333);
+  transition: 0.1s ease-in-out;
+  border-right: 5px solid red;
+}
+#position input {
+  transform: scale(3);
+  margin-top: -100px;
+  position: absolute;
+}
 
-    
+.panel {
+  background-color: #eee;
 }
-#position input{
-    transform:scale(3);margin-top:-100px;position:absolute;
+.panel:hover {
+  box-shadow: 0px 0px 20px #000;
 }
-
-.panel{
-    background-color:#eee;
+.panel-heading {
+  background-color: black !important;
+  font-size: large;
 }
-.panel:hover{
-    box-shadow: 0px 0px 20px rgb(20, 20, 20);
+.navbar-brand {
+  font-size: 25px;
+  color: white !important;
+  line-height: 60px;
 }
-.panel-heading{
-    background-color: black !important;
-    font-size: large;
-}
-.navbar-brand{
-    font-size: 25px;
-    color: white !important;
-    line-height: 60px;
-}
-.navbar{
-    background-color:#035AAC !important;
-    color: white !important;
-    height: 90px;
+.navbar {
+  background-color: rgb(2, 34, 70) !important;
 }
 .dropdown-toggle {
-    font-size: 20px;
-    color: white !important;
+  font-size: 20px;
+  color: white !important;
 }
-.navbar-right{
-    color: white !important;
-   
+.navbar-right {
+  color: white !important;
 }

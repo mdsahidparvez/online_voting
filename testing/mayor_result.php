@@ -5,17 +5,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+	<title>Document</title>
+	
+
+<style>
+	.table-hover tbody tr:hover td,
+.table-hover tbody tr:hover th {
+  background-color: #0ff5;
+}
+</style>
 </head>
 <body>
 <div class="container ">
 
 
-            <table class="table table-striped table-bordered table-hover ">
+            <table class="table highchart w3-table-all table-striped table-bordered table-hover ">
 					<thead>
-						<td style = "width:600px;" class = "alert alert-success">Candidate for Mayor</td>
-						<td style = "width:200px;"class = "alert alert-success">Image</td>
-						<td class = "alert alert-success">Total</td>
+						<th style = "width:600px;" class = "alert alert-success">Candidate for Mayor</th>
+						<th style = "width:200px;"class = "alert alert-success">Image</th>
+						<th class = "alert alert-success">Total</th>
 					
 					</thead>
 					<?php
@@ -36,7 +44,7 @@
 					
 					
 			</table>
-            <table class="table table-striped table-bordered table-hover ">
+            <table class="table table-striped table-bordered table-hover " >
 					<thead>
 						<td style = "width:600px;"class = "alert alert-success">Deputy Mayor</td>
 						<td style = "width:200px;" class = "alert alert-success">Image</td>
@@ -68,7 +76,7 @@
 
 
             
-</div>  <!--close container-->           
-					
+</div>  <!--close container--> 
+	
 </body>
 </html>

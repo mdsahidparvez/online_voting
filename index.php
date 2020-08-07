@@ -6,14 +6,21 @@
     <?php include ('navbar.php');?>
 
     <?php include ('script.php');?>
-    <div class="container-fluid main" >
-        <div class="c1">
-           <a href="voter-login.php">VOTE</a> 
-        </div>
-        <div class="c2">
-          <a href="register.php">Register</a> 
+    <div class="wrapper">
+      <div class="main" >
+          <div class="secure">Secured with AES-256 CBC</div>
+          <div class="c0">
+            Please Login to Vote
+          </div>
+          <div class="c1">
+            <a href="voter-login.php">Login</a> 
+          </div>
+          <div class="c2">
+            <a href="register.php">Register</a> 
 
-        </div>
+          </div>
+      </div>
+    
     </div>
 
   

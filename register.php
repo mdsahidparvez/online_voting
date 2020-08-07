@@ -30,10 +30,11 @@
 				$email=$_POST['email'];
 				$id_number=$_POST['id_number'];
 				$dob=$_POST['dob'];
+				$ward = $_POST['ward'];
+
 				
-				
-				$today=date("Y-m-d");
-				$diff=date_diff(date_create($dob),date_create($today));
+				$today=date("Y-m-d"); //getting today date
+				$diff=date_diff(date_create($dob),date_create($today));//subtracting date
 				$age=$diff->format('%y');
 			//	$new_date = date('Y-m-d', strtotime($_POST['dob']));//getting dob from input
 				
@@ -41,14 +42,21 @@
 				$pass = $_POST['password'];
 				$password=password_hash($pass,PASSWORD_BCRYPT);//pasword hashing
 
+				//add voter photo
+				$image1= addslashes(file_get_contents($_FILES['image1']['tmp_name']));
+				move_uploaded_file($_FILES["image1"]["tmp_name"],"register/upload/" . $_FILES["image1"]["name"]);			
+				$location1="upload/" . $_FILES["image1"]["name"];
+
+
+				//add image of citizenship
 				$image= addslashes(file_get_contents($_FILES['image']['tmp_name']));
 				$image_name= addslashes($_FILES['image']['name']);
 				$image_size= getimagesize($_FILES['image']['tmp_name']);
-				$ward = $_POST['ward'];
 				move_uploaded_file($_FILES["image"]["tmp_name"],"register/upload/" . $_FILES["image"]["name"]);			
 				$location="upload/" . $_FILES["image"]["name"];
+				
 
-
+				// check if id already exists in the database
 				$query = $conn->query("SELECT * FROM voters WHERE id_number='$id_number'") or die (mysql_error());
 				$count = $query->fetch_array();
 
@@ -71,8 +79,8 @@
 					echo "<h2><p class=\"alert-danger text-center\" ><strong>ERROR!</strong> Mobile number must be 10 digit </p></h2>";					
 					
 				}
-				else{
-					$conn->query("insert into voters(id_number, password, firstname,lastname,status,img,ward,dob,mobile,email) VALUES('$id_number', '$password','$firstname','$lastname','Unvoted','$location','$ward','$dob','$mobile','$email')");
+				else{ ///insert registration details into database
+					$conn->query("insert into voters(photo,id_number, password, firstname,lastname,status,img,ward,dob,mobile,email) VALUES('$location1', '$id_number', '$password','$firstname','$lastname','Unvoted','$location','$ward','$dob','$mobile','$email')");
 					
 					echo "<h2><p class=\"alert-success text-center\" ><strong>SUCCESS!</strong> Your form is successfully submitted for verification.<br>Check voter list within 5 days </p></h2>";
 								
@@ -94,7 +102,11 @@
                         </div>
                         <br>
                         <div class="panel-body">
-                         <form method = "post" enctype = "multipart/form-data">	
+						 <form method = "post" enctype = "multipart/form-data">	
+						 					<div class="form-group">
+												<label>Upload Your Photo</label>
+												<input type="file" name="image1"required> 
+											</div>
 											<div class="form-group">
 												<label>ID Number</label>
 												<input class ="form-control" type = "text" name = "id_number" placeholder = "ID number" required="true" autocomplete="off">

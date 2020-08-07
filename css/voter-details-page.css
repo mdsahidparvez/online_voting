@@ -1,0 +1,80 @@
+a{
+    text-decoration: none;
+    color: white;
+
+}
+a:focus{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    text-decoration: none;
+    color: white;
+}
+a:visited{
+    text-decoration: none;
+}
+.main-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 10px 10px;
+}
+.main-container .voter-details-container .title{
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    font-size: 20px;
+}
+.voter-details-container{
+    background-color: #ddd;
+    padding: 50px 50px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    width: 50%;
+
+}
+.voter-details-container div{
+    font-size: 20px;
+    margin: 5px 0px;
+    letter-spacing: 1.5px;
+
+}
+.voter-photo{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    
+}
+.voter-photo img{
+    margin: auto;
+    width: 200px;
+    height: 200px;
+}
+.main-container .right-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 50%;
+    align-items: center;
+
+
+    
+}
+.main-container .right-container  .vote-now{
+    font-size: 20px;
+    background-color: rgb(51, 236, 51);
+    padding: 20px;
+    cursor: pointer;
+
+
+}

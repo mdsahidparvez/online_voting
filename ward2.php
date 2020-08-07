@@ -5,7 +5,7 @@
         <?php include ('side_bar.php');?>
     </div>
 	<form method = "POST" action = "vote_result.php">
-    	<div class='container ' style="background-color:white; text-align:center;"><h3>WARD : <?php echo $row['ward'];?></h3></div>
+    	<div class='container ' style="background-color:white; text-align:center;font-size:20px;padding:20px;font-weight:bolder;">WARD : <?php echo $row['ward'];?></div>
 		<div class="col-lg-6">
 	
                     <div class="panel panel-primary">

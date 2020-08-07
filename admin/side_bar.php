@@ -1,4 +1,5 @@
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-bottom:0; background-color:#0866D1;height:90px;">
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="  background-color: rgb(2, 34, 70) !important;
+height:70px;">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -6,7 +7,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#"><img src="..\pictures\logo.png" width="200px;" height="50px;" alt=""> </a>
+                <a class="navbar-brand" href="#" style="margin-top:10px;  font-size: 25px;letter-spacing: 2px;font-weight: bolder;font-family: Varela Round, sans-serif;; color: white !important; margin-left: 20px;"> HAMRO VOTE </a>
 				
             </div>
       
@@ -24,7 +25,7 @@
 				
 			 ?>
                 <li class="dropdown">
-				<img src="<?php echo $row ['img']?>" style="width:50px;height:50px;border-radius:100%;" onclick="window.open(this.src)" alt="">
+				<img src="<?php echo $row ['img']?>" style="border:2px solid white;width:50px;height:50px;border-radius:100%;" onclick="window.open(this.src)" alt="">
 											
 											
                     </a>
@@ -33,7 +34,7 @@
                 </li>
                
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" style = "color: white; font-size:30px;">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" style = "color: white; font-size:20px;">
 					Admin: <?php echo $user_username = $user_row['firstname']." ".$user_row['lastname'];?>
                           
                     </a>

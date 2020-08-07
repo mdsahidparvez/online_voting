@@ -5,6 +5,41 @@
 		$idno=$_POST['idno'];
 		$password=$_POST['password'];
 	
+		$result = $conn->query("SELECT * FROM voters WHERE id_number = '$idno' ") or die(mysqli_errno());
+		$row = $result->fetch_array();
+		$voted = $conn->query("SELECT * FROM `voters` WHERE id_number = '$idno' && `status` = 'Voted'")->num_rows;
+		$numberOfRows = $result->num_rows;				
+		$sql = $conn->query("SELECT * FROM voters WHERE id_number = '$idno' ") or die(mysqli_errno());
+
+
+		if ($numberOfRows > 0){
+			session_start();
+			$data=$sql->fetch_array();
+			if(password_verify($password, $data['password'])){
+				$_SESSION['voters_id'] = $row['voters_id'];
+				header('location:ward2.php');
+				header('location:voter-details-page.php');
+
+			}
+		
+		}
+		
+		if($voted == 1){
+			echo " <br><center><font color= 'red'  size='5'>You have already voted</center></font>";
+		}else{
+			echo " <br><center><font color= 'red' size='3'>LOGIN ERROR!</center></font>";
+		}
+	
+	}
+
+
+
+
+	/*
+		if(isset($_POST['login'])){
+		$idno=$_POST['idno'];
+		$password=$_POST['password'];
+	
 		$result = $conn->query("SELECT * FROM voters WHERE id_number = '$idno'  && `account` = 'active' && `status` = 'Unvoted'") or die(mysqli_errno());
 		$row = $result->fetch_array();
 		$voted = $conn->query("SELECT * FROM `voters` WHERE id_number = '$idno' && `status` = 'Voted'")->num_rows;
@@ -17,8 +52,9 @@
 			$data=$sql->fetch_array();
 			if(password_verify($password, $data['password'])){
 				$_SESSION['voters_id'] = $row['voters_id'];
-				header('location:vote.php');
 				header('location:ward2.php');
+				header('location:voter-details-page.php');
+
 			}
 		
 		}
@@ -29,5 +65,11 @@
 			echo " <br><center><font color= 'red' size='3'>LOGIN ERROR!</center></font>";
 		}
 	
-	}
+	}	
+	*/
 ?>
+
+
+
+
+
