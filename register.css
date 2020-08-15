@@ -1,0 +1,15 @@
+#previewImage{
+    margin-top: -90px;
+    margin-left: 450px;
+    border: 2px solid #ccc;
+ 
+}
+
+form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    letter-spacing: 1px;
+
+}

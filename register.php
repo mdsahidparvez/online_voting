@@ -1,5 +1,7 @@
-<?php  $page='registervoter'; include ('head.php');?>
+<?php  $page='registervoter'; include ('head.php'); ?>
 <body>
+<link rel="stylesheet" href="register.css">
+
 <?php include ('navbar.php');?>
 
 
@@ -18,13 +20,14 @@
 		
 ?>
     <div class ="container-fluid" id="wrapper" style="background-color:#0008; margin-top:60px;padding:50px;">
-		<div class ="container col-md-8" id="wrapper" style="background-color:white;padding:50px; ">
+		<div class ="container col-md-9" id="wrapper" style="background-color:white;padding:50px; ">
 
 		<?php 	//////////////////FORM VALIDATION
 			require 'register/dbcon.php';
 
 			if (isset($_POST['save'])){
 				$firstname=$_POST['firstname'];
+				$middlename=$_POST['middlename'];
 				$lastname=$_POST['lastname'];
 				$mobile=$_POST['mobile'];
 				$email=$_POST['email'];
@@ -48,12 +51,18 @@
 				$location1="upload/" . $_FILES["image1"]["name"];
 
 
-				//add image of citizenship
+				//add image of citizenship front
 				$image= addslashes(file_get_contents($_FILES['image']['tmp_name']));
 				$image_name= addslashes($_FILES['image']['name']);
 				$image_size= getimagesize($_FILES['image']['tmp_name']);
 				move_uploaded_file($_FILES["image"]["tmp_name"],"register/upload/" . $_FILES["image"]["name"]);			
 				$location="upload/" . $_FILES["image"]["name"];
+				
+
+				//add image of citizenship back
+				$image2= addslashes(file_get_contents($_FILES['image2']['tmp_name']));
+				move_uploaded_file($_FILES["image2"]["tmp_name"],"register/upload/" . $_FILES["image2"]["name"]);			
+				$location2="upload/" . $_FILES["image2"]["name"];
 				
 
 				// check if id already exists in the database
@@ -65,8 +74,8 @@
 					echo "<h2><p class=\"alert-danger text-center\" ><strong>ERROR!</strong> ID already exists</p></h2>";					
 				
 				}
-				elseif ($age<18){
-					echo "<h2><p class=\"alert-danger text-center\" ><strong>ERROR!</strong> Age below 18 are not allowed to vote </p></h2>";					
+				elseif ($age<16){
+					echo "<h2><p class=\"alert-danger text-center\" ><strong>ERROR!</strong> Age below 16 are not allowed to Register </p></h2>";					
 
 				}
 				elseif (strlen($pass)<8) {
@@ -80,7 +89,7 @@
 					
 				}
 				else{ ///insert registration details into database
-					$conn->query("insert into voters(photo,id_number, password, firstname,lastname,status,img,ward,dob,mobile,email) VALUES('$location1', '$id_number', '$password','$firstname','$lastname','Unvoted','$location','$ward','$dob','$mobile','$email')");
+					$conn->query("insert into voters(photo,id_number, password, firstname,middlename,lastname,status,img,citizenship_back,ward,dob,mobile,email) VALUES('$location1', '$id_number', '$password','$firstname','$middlename', '$lastname','Unvoted','$location','$location2','$ward','$dob','$mobile','$email')");
 					
 					echo "<h2><p class=\"alert-success text-center\" ><strong>SUCCESS!</strong> Your form is successfully submitted for verification.<br>Check voter list within 5 days </p></h2>";
 								
@@ -90,30 +99,30 @@
 
         <!-- Page Content -->
         <div>
-            <div class="row">
-                <div class="container text-center" style="font-size:40px;">
+            <div>
+                <div class="container text-center" style="font-size:25px; background-color:black;color:white;">
                     Voter Registration Form
                 </div>
                 <br><br><br>
-				<div class = "container col-md-6">
+				<div class = "container col-md-12">
 					<div class="panel">
-                        <div class="panel-heading">
-                            Please Enter the Details Needed Below
-                        </div>
-                        <br>
+                    
+                    
                         <div class="panel-body">
 						 <form method = "post" enctype = "multipart/form-data">	
-						 					<div class="form-group">
+						 					<div class="form-group f1">
 												<label>Upload Your Photo</label>
-												<input type="file" name="image1"required> 
+												<input id="inpFile" type="file" name="image1"required> 
+												<img id="previewImage" src="images\user.png" width="200px" height="200px" alt="">
+
 											</div>
-											<div class="form-group">
+											<div class="form-group f2">
 												<label>ID Number</label>
 												<input class ="form-control" type = "text" name = "id_number" placeholder = "ID number" required="true" autocomplete="off">
-													
+												
 											</div>
 											
-											<div class="form-group">
+											<div class="form-group f3">
 											<?php 
 													$change =  passFunc(8, 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890');
 											?>	
@@ -124,7 +133,11 @@
 											
 											<div class="form-group">
 												<label>Firstname</label>
-													<input class="form-control" type ="text" name = "firstname" placeholder="Firstname" required="true">
+													<input  class="form-control" type ="text" name = "firstname" placeholder="Firstname" required="true">
+											</div>
+											<div class="form-group">
+												<label>Middlename</label>
+													<input  class="form-control" type ="text" name = "middlename" placeholder="Middle name">
 											</div>
 											<div class="form-group">
 												<label>Lastname</label>
@@ -141,8 +154,16 @@
 
 
 											<div class="form-group">
-												<label>Citizenship Photo</label>
-												<input type="file" name="image"required> 
+												<label>Citizenship Photo Front</label>
+												<input id="inpFile1" type="file" name="image"required>
+												<img id="previewImage1" src="" width="200px" height="200px" alt="">
+ 
+											</div>
+											<div class="form-group">
+												<label>Citizenship Photo Back</label>
+												<input id="inpFile2" type="file" name="image2"required>
+												<img id="previewImage2"  src="" width="200px" height="200px" alt="">
+ 
 											</div>
 											<div class="form-group">
 												<label for="birthday">Date of Birth:</label>
@@ -183,7 +204,64 @@
 	 	</div>
     </div>
     <!-- /#wrapper -->
+
+
+
+	<script>
+		//preview the upload file in modal
+		const inpFile=document.getElementById("inpFile");
+		const previewImage =document.getElementById("previewImage")
+		var src;
+		inpFile.addEventListener("change", function(event){
+			if(event.target.files.length>0){
+				src = URL.createObjectURL(event.target.files[0]);
+
+				previewImage.src=src;
+				console.log(src);
+
+
+			}
+
+		});
+
+		//preview citizenship front photo
+		const inpFile1=document.getElementById("inpFile1");
+		const previewImage1 =document.getElementById("previewImage1")
+		var src;
+		inpFile1.addEventListener("change", function(event){
+			if(event.target.files.length>0){
+				src = URL.createObjectURL(event.target.files[0]);
+
+				previewImage1.src=src;
+				console.log(src);
+
+
+			}
+
+		});
+		//preview citizenship back photo
+		const inpFile2=document.getElementById("inpFile2");
+		const previewImage2 =document.getElementById("previewImage2")
+		var src;
+		inpFile2.addEventListener("change", function(event){
+			if(event.target.files.length>0){
+				src = URL.createObjectURL(event.target.files[0]);
+
+				previewImage2.src=src;
+				console.log(src);
+
+
+			}
+
+		});
+
+
+	
+	</script>
+	
 </body>
+
+
 
 </html>
 

@@ -9,7 +9,7 @@
         <!-- Page Content -->
         <div id="page-wrapper">
             <div class="row">
-                <div class="col-md-12 text-center" style="font-size:40px; " >
+                <div class="col-md-12 text-center" style="font-size:40px;" >
                      <p>Voters List</p> 
                 </div>
 				 

@@ -1,3 +1,9 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Varela Round", sans-serif !important;
+}
 #position img {
   border-radius: 100% !important;
   border: 2px solid black;
@@ -25,18 +31,55 @@
   background-color: black !important;
   font-size: large;
 }
-.navbar-brand {
-  font-size: 25px;
-  color: white !important;
-  line-height: 60px;
+
+nav{
+  background-color: black;
+  height: 90px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+
+  
 }
-.navbar {
-  background-color: rgb(2, 34, 70) !important;
+nav .nav-links{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 50px;
+  align-items: center;
 }
-.dropdown-toggle {
+nav .nav-links .nav-item{
+  list-style: none;
+  color:white ;
+}
+
+nav .nav-links .photo img{
+  width: 80px;
+  height: 80px;
+  border: 3px solid white;
+  border-radius: 100%;
+}
+.logout a{
+  background-color: red;
+  padding: 5px  10px;
   font-size: 20px;
-  color: white !important;
+  text-align: center;
+
 }
-.navbar-right {
-  color: white !important;
+.brand{
+  font-size: 25px;
+  letter-spacing: 4px;
+  font-weight: bold;
+}
+.welcome{
+  letter-spacing: 3px;
+  font-size: 20px;
+  background-color: white;
+  color: black !important;
+  padding: 5px 20px;
+}
+
+.welcome span{
+  color: red;
 }

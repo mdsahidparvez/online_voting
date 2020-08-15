@@ -47,7 +47,7 @@ height:70px;">
 			<?php }?>
             <!-- /.navbar-top-links -->
 
-            <div class="navbar-default sidebar" role="navigation" style="background-color:#056;">
+            <div class="navbar-default sidebar" role="navigation" style="height:80vh;background-color:#056; overflow-y:scroll;">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
                         
@@ -84,7 +84,14 @@ height:70px;">
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a href="pending_registration.php" style="background-color:#067; color:white;font-size:20px;"> Pending Registration Verification</a>
+                            <a href="pending_registration.php" style="background-color:darkblue; color:white;font-size:20px;"> Pending Registration Verification</a>
+                        </li>
+                        <li>
+                            <a href="verified_voters.php" style="background-color:darkgreen; color:white;font-size:20px;"> Verified Voters</a>
+                        </li>
+						
+                        <li>
+                            <a href="rejected_voters.php" style="background-color:#cd1300; color:white;font-size:20px;"> Rejected Voters</a>
                         </li>
 						
                         <li>

@@ -12,11 +12,11 @@
             <div class="row">
               
 				<?php 
-					$count = $conn->query("SELECT COUNT(*) as total FROM `voters` where account=''")->fetch_array();
+					$count = $conn->query("SELECT COUNT(*) as total FROM `voters` where account='active'")->fetch_array();
 					
                     
 					?>
-                <div class="container" style="font-size:20px;color:white;background-color:#056; width:250px; padding:10px;margin-top:10px; ">Pending  Verifications : <?php echo $count['total']?></div>
+                <div class="container" style="font-size:20px;color:white;background-color:#056; width:250px; padding:10px;margin-top:10px; ">Total verified : <?php echo $count['total']?></div>
 
 				
 				
@@ -27,8 +27,8 @@
                         <div class="panel-heading">
                             <h4 class="modal-title" id="myModalLabel">         
 												<div class="panel panel-primary">
-													<div class="panel-heading" style="background-color:darkblue;text-align:center;">
-														Pending Registration Verification
+													<div class="panel-heading" style="background-color:darkgreen;text-align:center;">
+														Verified Voters
 													</div>    
 												</div>
 											</h4>
@@ -58,7 +58,7 @@
                                             require 'dbcon.php';
                                             
 											
-											$query = $conn->query("SELECT * FROM voters where account='' ORDER BY voters_id DESC");
+											$query = $conn->query("SELECT * FROM voters where account='active' ORDER BY voters_id DESC");
 											while($row1 = $query->fetch_array()){
 											$voters_id=$row1['voters_id'];
 										?>
@@ -66,8 +66,9 @@
 											<tr>
 												<td><?php echo $row1 ['id_number'];?></td>
 												<td><?php echo $row1 ['firstname']." ". $row1 ['lastname'];?></td>
-												<td><img src="../register/<?php echo $row1 ['photo'];?>" width="40px" height="40px" alt=""></td>
-												<td><?php echo $row1 ['status'];?></td>
+                                                <td><img src="../register/<?php echo $row1 ['photo'];?>" width="40px" height="40px" alt=""></td>
+
+                                                <td><?php echo $row1 ['status'];?></td>
 												<td><?php echo $row1 ['account'];?></td>
                                                 <td><?php echo $row1 ['mobile'];?></td>
 												<td><?php echo $row1 ['email'];?></td>

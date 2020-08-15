@@ -1,9 +1,9 @@
 <?php include ('head2.php');?>
 <?php include("sess.php")?>
 <body>
-    <div id="wrapper">
+    
         <?php include ('side_bar.php');?>
-    </div>
+   
 	<form method = "POST" action = "vote_result.php">
     	<div class='container ' style="background-color:white; text-align:center;font-size:20px;padding:20px;font-weight:bolder;">WARD : <?php echo $row['ward'];?></div>
 		<div class="col-lg-6">
@@ -163,120 +163,7 @@
 			</div>      
         </div>
      </div>
-	<!--<div class="col-lg-6">
-	  <div class="panel panel-primary">
-            <div class="panel-heading">
-			<center>PIO</center>
-            </div>
-            <div class="panel-body" style = "background-color:;">
-				<?php
-					$query = $conn->query("SELECT * FROM `candidate` WHERE `position` = 'PIO'") or die(mysqli_errno());
-					while($fetch = $query->fetch_array())
-					{
-				?>
-						<div id = "position">
-							<img src = "admin/<?php echo $fetch['img']?>" style ="border-radius:6px;" height = "150px" width = "150px" class = "img">
-						<center><button type="button" class="btn btn-primary btn-xs" style = "border-radius:60px;margin-top:4px;"><?php echo $fetch['firstname']." ".$fetch['lastname']?></button></center>
-							<center><input type = "checkbox" value = "<?php echo $fetch['candidate_id'] ?>" name = "pio_id" class = "pio"></center>
-						</div>
-	
-				<?php
-					}
-				?>
-			</div>      
-        </div>
-     </div>
-	<div class="col-lg-6">
-	  <div class="panel panel-primary">
-            <div class="panel-heading">
-			<center>BUSINESS MANAGER</center>
-            </div>
-            <div class="panel-body" style = "background-color:;">
-				<?php
-					$query = $conn->query("SELECT * FROM `candidate` WHERE `position` = 'Business Manager'") or die(mysqli_errno());
-					while($fetch = $query->fetch_array())
-					{
-				?>
-						<div id = "position">
-							<img src = "admin/<?php echo $fetch['img']?>" style ="border-radius:6px;" height = "150px" width = "150px" class = "img">
-						<center><button type="button" class="btn btn-primary btn-xs" style = "border-radius:60px;margin-top:4px;"><?php echo $fetch['firstname']." ".$fetch['lastname']?></button></center>
-							<center><input type = "checkbox"  value = "<?php echo $fetch['candidate_id'] ?>" name = "busman_id" class = "busman"></center>
-						</div>
-	
-				<?php
-					}
-				?>
-			</div>      
-        </div>
-     </div>
-	<div class="col-lg-6">
-	  <div class="panel panel-primary">
-            <div class="panel-heading">
-			<center>SGT @ ARMS</center>
-            </div>
-            <div class="panel-body" style = "background-color:;">
-				<?php
-					$query = $conn->query("SELECT * FROM `candidate` WHERE `position` = 'Sgt. @ Arms'") or die(mysqli_errno());
-					while($fetch = $query->fetch_array())
-					{
-				?>
-						<div id = "position">
-							<img src = "admin/<?php echo $fetch['img']?>" style ="border-radius:6px;" height = "150px" width = "150px" class = "img">
-							<center><button type="button" class="btn btn-primary btn-xs" style = "border-radius:60px;margin-top:4px;"><?php echo $fetch['firstname']." ".$fetch['lastname']?></button></center>
-							<center><input type = "checkbox"  value = "<?php echo $fetch['candidate_id'] ?>" name = "sgtarm_id" class = "sgtarm"></center>
-						</div>
-	
-				<?php
-					}
-				?>
-			</div>      
-        </div>
-     </div>
-	<div class="col-lg-6">
-	  <div class="panel panel-primary">
-            <div class="panel-heading">
-			<center>MUSE</center>
-            </div>
-            <div class="panel-body" style = "background-color:;">
-				<?php
-					$query = $conn->query("SELECT * FROM `candidate` WHERE `position` = 'Muse'") or die(mysqli_errno());
-					while($fetch = $query->fetch_array())
-					{
-				?>
-						<div id = "position">
-							<img src = "admin/<?php echo $fetch['img']?>" style ="border-radius:6px;" height = "150px" width = "150px" class = "img">
-						<center><button type="button" class="btn btn-primary btn-xs" style = "border-radius:60px;margin-top:4px;"><?php echo $fetch['firstname']." ".$fetch['lastname']?></button></center>
-							<center><input type = "checkbox"  value = "<?php echo $fetch['candidate_id'] ?>" name = "muse_id" class = "muse"></center>
-						</div>
-	
-				<?php
-					}
-				?>
-			</div>      
-        </div>
-     </div>
-	<div class="col-lg-6" style = "margin-left:350px;">
-	  <div class="panel panel-primary">
-            <div class="panel-heading">
-			<center>ESCORT</center>
-            </div>
-            <div class="panel-body" style = "background-color:;">
-				<?php
-					$query = $conn->query("SELECT * FROM `candidate` WHERE `position` = 'Escort'") or die(mysqli_errno());
-					while($fetch = $query->fetch_array())
-					{
-				?>
-						<div id = "position">
-							<img src = "admin/<?php echo $fetch['img']?>" style ="border-radius:6px;" height = "150px" width = "150px" class = "img">
-							<center><button type="button" class="btn btn-primary btn-xs" style = "border-radius:60px;margin-top:4px;"><?php echo $fetch['firstname']." ".$fetch['lastname']?></button></center>	<center><input type = "checkbox"  value = "<?php echo $fetch['candidate_id'] ?>" name = "escort_id" class = "escort"></center>
-						</div>
-	
-				<?php
-					}
-				?>
-			</div>      
-        </div>
-     </div>------------------------------->
+
 		
 		<center><button class = "btn btn-success ballot" type = "submit" name = "submit">Submit Ballot</button></center>
 		</form>

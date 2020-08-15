@@ -41,7 +41,8 @@
                         <div>Mobile : <?php echo $row1 ['mobile'];?> </div>
                         <div>Email :<?php echo $row1 ['email'];?></div>
                         <div>Ward : <?php echo $row1 ['ward'];?></div>
-                        <div>Citizenship : <img src="register/<?php echo $row1 ['img'];?>" alt="" width="350px" height="300px"></div>
+                        <div>Citizenship Front: <img src="register/<?php echo $row1 ['img'];?>" alt="" width="350px" height="300px"></div>
+                        <div>Citizenship Back: <img src="register/<?php echo $row1 ['citizenship_back'];?>" alt="" width="350px" height="300px"></div>
                     </div>
                     <div class="right-container">
                         <form action="" method="POST">
