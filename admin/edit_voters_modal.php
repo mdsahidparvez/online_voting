@@ -71,14 +71,14 @@
 
 					<div class="form-group">
 						<label>Ward</label>
-							<select class = "form-control" name = "ward"  required="true">
-								<option><?php echo $row1 ['ward']?></option>
-								<option>1</option>
-								<option>2</option>
-								<option>3</option>
-								<option>4</option>
-								
-							</select>
+						<select class = "form-control" name = "ward"  required="true">
+							<option><?php echo $row1 ['ward']?></option>
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							
+						</select>
 					</div>
 
 					
@@ -96,16 +96,17 @@
 						<label for="">Secret Voter ID</label>
 						<input id="secret_voter_id" name="secret_voter_id" type="text">
 					</div>
+						
 															
 					
+						<button name = "send_secret_voter_id"  class="btn btn-primary">Send secret Voter Id</button>
 						<button name = "done" type="submit" class="btn btn-primary">Save Data</button>
-						<button name = "cancel" type="reset" class="btn btn-success">Cancel All</button>
+						<button name = "cancel" type="reset" class="btn btn-danger">Cancel All</button>
 
 
 
 
-				
-					</div>
+
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 					

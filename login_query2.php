@@ -13,7 +13,7 @@
 		$sql = $conn->query("SELECT * FROM voters WHERE voters_id = '$idno'  && `account` = 'active' && `status` = 'Unvoted'") or die(mysqli_errno());
 
 
-		if ($numberOfRows > 0){
+		if ($numberOfRows > 0 && $_POST['secret_voter_id']==$row['secret_voter_id']){
 			session_start();
 			$data=$sql->fetch_array();
 				$_SESSION['voters_id'] = $row['voters_id'];
@@ -24,9 +24,9 @@
 		}
 		
 		if($voted == 1){
-			echo " <br><center><font color= 'red'  size='25'>You have already voted</center></font>";
+			echo " <br><center><div style='background-color:white'><font color= 'red'  size='15'>You have already voted</center></font><div>";
 		}else{
-			echo " <br><center><font color= 'red' size='3'>LOGIN ERROR!</center></font>";
+			echo " <br><center><div style='background-color:white'><font color= 'red'  size='15'>Login Error !</center></font><div>";
 		}
 	
 	}

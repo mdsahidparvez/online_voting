@@ -77,16 +77,44 @@ a:visited{
     align-items: center;
     background-color: #eee;
     padding: 50px;
+    height: 80vh;
 
 
     
 }
 .main-container .right-container  .vote-now{
     font-size: 20px;
-    background-color: rgb(51, 236, 51);
+    background-color: rgb(4, 100, 4);
     padding: 20px;
     cursor: pointer;
     border: none;
+  
 
+
+}
+
+.main-container .right-container  .vote-now:hover{
+    background-color: rgb(7, 141, 7);
+    padding: 20px 90px;
+    transition: 0.3s ease-in;
+
+}
+ .right-container form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    font-size: 20px;
+    color: white;
+    flex-wrap: wrap;
+    background-color: rgb(0, 31, 168);
+}
+input{
+    color: black;
+}
+.right-container form div:nth-child(1){
+    background-color: rgb(230, 82, 82);
+    padding: 10px;
+    
 
 }

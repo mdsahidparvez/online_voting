@@ -46,7 +46,16 @@
                     </div>
                     <div class="right-container">
                         <form action="" method="POST">
-                            <button class="vote-now" name = "vote-now">VOTE - NOW</button>
+                            <div>Please Enter the Secret ID to Vote</div>
+                            <div>
+                                <label for="">Secret Voter ID</label>
+                                <input name="secret_voter_id" type="text">
+                            </div>
+                            
+                            <div>
+                                <button class="vote-now" name = "vote-now">VOTE - NOW</button>
+
+                            </div>
                             <?php include ('login_query2.php');?>
                         </form>
 
