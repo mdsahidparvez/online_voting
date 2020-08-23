@@ -1,7 +1,7 @@
 <?php  $page='voter';include ('head.php');?>
 <body>
     
-    <div class="container login-box col-md-3 " id="login-box">
+    <div class="animate__animated animate__fadeInDown container login-box col-md-3 " id="login-box">
         <div class="container">
         <br>
             <div class="login-box-heading">
@@ -36,7 +36,7 @@
         
 <?php include ('navbar.php');?>
 
-<div class="  countdown float-right"><h6>Voting Ends in</h6><p  id="demo"></p></div>
+<div class="  countdown float-right animate__animated animate__zoomIn" style="animation-duration:1.2s;"><h6>Voting Ends in</h6><p  id="demo"></p></div>
 <?php include ('script.php');?>
 
 </body>
@@ -52,7 +52,7 @@
 
     
 // Set the date we're counting down to
-var countDownDate = new Date("Mar 30, 2021 20:52:25").getTime();
+var countDownDate = new Date("Oct 30, 2020 20:52:25").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -77,9 +77,12 @@ var x = setInterval(function() {
   if (distance < 0) {
     clearInterval(x);
     document.getElementById("demo").innerHTML = "EXPIRED";
+    document.getElementById("login-box").innerHTML = "<h1>You cannot Vote Voting Period has EXPIRED.</h1>";
 
   }
+  
 }, 1000);
+ 
 
 
 </script>

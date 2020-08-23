@@ -1,3 +1,11 @@
+
+
+<?php
+		//generates the random string 
+	
+			
+	?>
+
 <div class="modal fade" id="edit_voters<?php  echo $voters_id; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	<div class="modal-dialog">
 		<div class="modal-content">
@@ -92,9 +100,33 @@
 																		
 							</select>
 					</div>
-					<div class="form-group">
+				
+					<div class="form-group" style="background-color:red; padding:20px;color:white;font-size:20px;">
 						<label for="">Secret Voter ID</label>
-						<input id="secret_voter_id" name="secret_voter_id" type="text">
+						<input style="color:black;" id="secret_voter_id" name="secret_voter_id" type="text" value="<?php
+
+						if($row1['secret_voter_id']==null){
+
+							function generate($len, $set = "")
+							{
+								$gen = "";
+								for($i = 0; $i < $len; $i++)
+									{
+										$set = str_shuffle($set);
+										$gen.= $set[0]; 
+									}
+								return $gen;
+							} 
+							$generate=generate(8, 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890');	
+								echo $generate;
+
+						}
+						else{
+							echo $row1['secret_voter_id'];
+
+							
+						} 
+						?>">
 					</div>
 						
 															

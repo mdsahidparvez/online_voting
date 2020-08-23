@@ -7,8 +7,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hamro Vote</title>
+  
 
     <link rel="stylesheet" href="css/voter-details-page.css">
+   
 </head>
 <body>
     <div id="wrapper">
@@ -29,7 +31,7 @@
                 
                 <div class="main-container">
 
-                    <div class="voter-details-container">
+                    <div class="voter-details-container animate__slideInLeft" style="animation-duration:0.6s;">
                         <div class="title">Profile</div>
                         <div class="voter-photo"><img src="register/<?php echo $row1 ['photo'];?>" alt="" ></div>
 
@@ -44,7 +46,7 @@
                         <div>Citizenship Front: <img src="register/<?php echo $row1 ['img'];?>" alt="" width="350px" height="300px"></div>
                         <div>Citizenship Back: <img src="register/<?php echo $row1 ['citizenship_back'];?>" alt="" width="350px" height="300px"></div>
                     </div>
-                    <div class="right-container">
+                    <div class="right-container animate__slideInRight " style="animation-duration:0.6s;">
                         <form action="" method="POST">
                             <div>Please Enter the Secret ID to Vote</div>
                             <div>

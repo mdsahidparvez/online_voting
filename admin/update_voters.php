@@ -1,21 +1,8 @@
 <?php
 include ('dbcon.php');
-if (isset ($_POST ['done'])){
-$voters_id = $_GET['voter_id'];
-$id_number=$_POST['id_number'];
-$secret_voter_id=$_POST['secret_voter_id'];
-$firstname=$_POST['firstname'];
-$lastname=$_POST['lastname'];
-//$year_level=$_POST['year_level'];
-$mobile=$_POST['mobile'];
-$ward=$_POST['ward'];
-$account=$_POST['account'];
-$conn->query ("UPDATE voters SET id_number = '$id_number', secret_voter_id='$secret_voter_id', firstname = '$firstname', lastname = '$lastname', 
-account = '$account', ward='$ward', mobile='$mobile' WHERE voters_id = '$voters_id'")or die(mysql_error());
-}
 
-//send secret voter id to voter via email
-if (isset($_POST['send_secret_voter_id'])){
+//send email to the person currently edited in modal
+function send_secret_voter_id(){
     $email=$_POST['email'];
     $secret_voter_id=$_POST['secret_voter_id'];
     $to_email = $email;
@@ -30,9 +17,53 @@ if (isset($_POST['send_secret_voter_id'])){
         echo "<h2><p class=\"alert-danger text-center\" ><strong>ERROR!</strong> Email sending failed </p></h2>";					
 
     }
-   
+
+}
+if (isset ($_POST ['done'])){
+    if($_POST['secret_voter_id']==null){
+        echo "Please enter secret id";
+    }
+    else{
+        $voters_id = $_GET['voter_id'];
+        $id_number=$_POST['id_number'];
+        $secret_voter_id=$_POST['secret_voter_id'];
+        $firstname=$_POST['firstname'];
+        $lastname=$_POST['lastname'];
+        //$year_level=$_POST['year_level'];
+        $mobile=$_POST['mobile'];
+        $ward=$_POST['ward'];
+        $account=$_POST['account'];
+        $conn->query ("UPDATE voters SET id_number = '$id_number', secret_voter_id='$secret_voter_id', firstname = '$firstname', lastname = '$lastname', 
+        account = '$account', ward='$ward', mobile='$mobile' WHERE voters_id = '$voters_id'")or die(mysql_error());
+    
+
+    //send secret voter id to voter via email
+    //if (isset($_POST['send_secret_voter_id'])){
+     
+        send_secret_voter_id();
+
+        
+
+
+        header("location: voters.php");
+ 
+
+
+
+    }
+
 }
 
-header("location: voters.php");
+
+if (isset($_POST['send_secret_voter_id'])){
+    send_secret_voter_id();
+
+
+
+}
+
+   
+//}
+
 
 ?>

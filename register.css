@@ -1,8 +1,7 @@
 #previewImage{
-    margin-top: -90px;
-    margin-left: 450px;
-    border: 2px solid #ccc;
- 
+    margin-top: -150px;
+    margin-left: 50px;
+    border: 1px solid rgb(0, 0, 0);
 }
 
 form{
@@ -11,5 +10,110 @@ form{
     justify-content: space-between;
     width: 100%;
     letter-spacing: 1px;
+
+}
+form>div:hover{
+    box-shadow: 0px 5px 10px rgba(8, 8, 8, 0.2);
+    
+
+}
+.login_details{
+    display: flex;
+    border: 2px solid #eee;
+    justify-content: space-evenly;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 10px;
+
+}
+.login_details .title{
+    font-weight: bold;
+
+}
+.login_details .note{
+    color: red;
+    font-size: 12px;
+    width: 35%;
+}
+.login_details div{
+    margin: 5px 15px;
+}
+
+
+.personal-details{
+    padding: 10px 0;
+
+    border: 2px solid #ddd;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    display: flex;
+}
+.personal-details .title{
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+}
+
+.citizenship-details-wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    border: 2px solid #eee;
+    padding: 10px 0;
+    margin: 10px 0;
+}
+.citizenship-details-wrapper .form-group{
+   width: 40%;
+  
+}
+.citizenship-details-wrapper .header{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.citizenship-details-wrapper .header .title{
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+
+}
+.citizenship-details-wrapper .header .contents{
+    width: 100%;
+    display: flex;
+
+
+}
+.citizenship-details-wrapper .header .contents .form-group{
+    margin: 0 5px;
+
+
+
+
+}
+.citizenship-details-wrapper .header .title{
+    width: 100% !important;
+    text-align: center;
+
+}
+.permanent_address_details{
+    border: 2px solid #eee;
+    padding: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+
+
+}
+.permanent_address_details .title{
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    
 
 }
