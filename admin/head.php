@@ -18,12 +18,14 @@
   <link href="../css/style.css" rel="stylesheet">
 
 
+
    
 
     <!-- Custom CSS -->
     <link href="../css/sb-admin-2.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="..\css\fontawesome\all.css">
     <script src="..\css\fontawesome\all.js"></script>
+    <link href="side_bar.css" rel="stylesheet">
 
 
 

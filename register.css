@@ -12,11 +12,7 @@ form{
     letter-spacing: 1px;
 
 }
-form>div:hover{
-    box-shadow: 0px 5px 10px rgba(8, 8, 8, 0.2);
-    
 
-}
 .login_details{
     display: flex;
     border: 2px solid #eee;
@@ -116,4 +112,8 @@ form>div:hover{
     font-weight: bold;
     
 
+}
+.permanent_address_details .form-group{
+    width: 200px;
+    margin: 20px;
 }

@@ -39,8 +39,9 @@ a:visited{
     text-transform: uppercase;
 }
 .voter-details-container{
-    background-color: #ddd;
-    padding: 50px 50px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgb(143, 143, 143);
+    padding: 20px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -64,18 +65,22 @@ a:visited{
     
 }
 .voter-photo img{
+    border:2px solid #eee;
+
     margin: auto;
     width: 200px;
     height: 200px;
 }
 .main-container .right-container{
+    box-shadow: 0 0 10px rgb(143, 143, 143);
+
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: flex-start;
     width: 40%;
     align-items: center;
-    background-color: #eee;
+    background-color: #fff;
     padding: 50px;
     height: 80vh;
 
@@ -85,22 +90,17 @@ a:visited{
 .main-container .right-container  .vote-now{
     font-size: 20px;
     background-color: rgb(4, 100, 4);
-    padding: 20px;
+    padding: 10px 20px;
     cursor: pointer;
     border: none;
     transition: 0.3s ease-in;
+    display: block;
 
   
 
 
 }
 
-.main-container .right-container  .vote-now:hover{
-    background-color: rgb(7, 141, 7);
-    padding: 20px 90px;
-    transition: 0.3s ease-in;
-
-}
  .right-container form{
     display: flex;
     justify-content: center;
@@ -116,8 +116,6 @@ a:visited{
     background-color: rgb(8, 45, 206);
 
 
-    transform: scale(1.2);
-    transition: 0.4s ease-in-out;
 
 }
 input{

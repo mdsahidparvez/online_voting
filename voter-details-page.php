@@ -29,7 +29,7 @@
 
                 
                 
-                <div class="main-container">
+                <div class="main-container" style="background:#eee;">
 
                     <div class="voter-details-container animate__slideInLeft" style="animation-duration:0.6s;">
                         <div class="title">Profile</div>

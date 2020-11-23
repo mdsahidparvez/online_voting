@@ -1,3 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+body{
+	font-family: 'Poppins', sans-serif;
+}
+h3.page-header{
+	text-align: center;
+	font-size: 30px;
+	position: relative;
+	width: 100%;
+	border: none;
+	margin: 0;
+	margin-bottom: 20px;
+	text-transform: capitalize;
+  }
+h3.page-header:after{
+	content: '';
+	position: absolute;
+	height: 4px;
+	width: 100px;
+	display: block;
+	background: rgb(24, 1, 228);
+	border-radius: 50px;
+	margin-top: 10px;
+	margin-left: 50%;
+	transform: translateX(-50%);
+
+}
+/* Email page*/
+form.email-specific,form.email-all{
+
+}
+form.email-specific,form.email-all label, form.email-specific,form.email-specific label{
+	width: 100%;
+	display: block;
+}
+
+div.email-all-wrapper,div.email-specific-wrapper{
+	background: #fff !important;
+	width: 40%;
+	margin: 50px;
+	padding: 20px !important;
+	border-radius: 10px;
+
+}
+/*end email page*/
+/*Schedule Election page */
+form.schedule-form{
+	box-shadow: 0 0 10px rgb(204, 199, 199);
+	width: 50%;
+	margin: auto;
+	background: #fff;
+	padding: 50px;
+}
+.election-list-wrapper{
+	box-shadow: 0 0 10px rgb(204, 199, 199);
+	background: #fff;
+	padding: 20px;
+	margin:2% 5%;
+}
+.election-list-wrapper .title{
+	text-align: center;
+	font-weight: 500;
+	margin: auto;
+	font-size: 20px;
+
+}
+.election-list-wrapper table{
+	margin: 20px;
+}
+/*end schedule page*/
 @media print{
 	#print{
 		display:none;

@@ -9,6 +9,7 @@
 
         <!-- Page Content -->
         <div id="page-wrapper">
+            <h3 class="page-header">Verified Voters</h3>
             <div class="row">
               
 				<?php 

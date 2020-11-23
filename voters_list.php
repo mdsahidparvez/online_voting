@@ -3,7 +3,7 @@
 <body>
     <?php include ('navbar.php');?>
 
-    <div class="container-fluid" style="margin-top:60px; background-color:white; padding:40px;">
+    <div class="container-fluid" style="margin-top:60px; background-color:#026899; padding:40px; color:#fff;height:100vh;">
 
 
         <!-- Page Content -->
@@ -13,7 +13,7 @@
                      <p>Voters List</p> 
                 </div>
 				 
-                    <div class="container col-md-3 text-center " style="position:relative;margin-top:60px;color:blue;"><h3> <i class="fas fa-search"></i>voter id</h3><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for ID no."></div>
+                    <div class="container col-md-3 text-center " style="position:relative;margin-top:60px;"><h3> <i class="fas fa-search"></i>voter id</h3><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for ID no."></div>
 				
                     <div class="container col-md-6 " >
                         
@@ -62,7 +62,7 @@
                         </div>
                         <!-- /.panel-body -->
                     </div>
-                    <div class="container col-md-3 text-center"  style="background-color:white;color:black;padding:5px;  " ><h4>Name not in Voter list?<br><h6>Please register or contact admin</h5></h6></div>
+                    <div class="container col-md-3 text-center"  style="background-color:#026899;color:#fff;padding:5px;  " ><h4>Name not in Voter list?<br><h6>Please register or contact admin</h5></h6></div>
 
                     <!-- /.panel -->
               

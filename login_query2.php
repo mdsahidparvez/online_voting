@@ -24,9 +24,9 @@
 		}
 		
 		if($voted == 1){
-			echo " <br><center><div style='background-color:white'><font color= 'red'  size='15'>You have already voted</center></font><div>";
+			echo " <br><center><div style='background-color:white'><font color= 'red'  >You have already voted</center></font><div>";
 		}else{
-			echo " <br><center><div style='background-color:white'><font color= 'red'  size='15'>Login Error !</center></font><div>";
+			echo " <br><center><div style='background-color:white;display:block;'><font color= 'red'>Login Error !</center></font><div>";
 		}
 	
 	}

@@ -6,8 +6,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Online Voting System For Municipality with AES-256-CBC Encryption ">
+    <meta name="author" content="Sudarshan Giri">
+    <meta property="og:url" content="http://sudarshangiri7.000webhostapp.com/index.php" />
+    <meta property="og:image" content="images\OnlineVoting.JPG" />
+    <meta property="og:description" content="Site description" />
 
     <title>Online Voting System</title>
 

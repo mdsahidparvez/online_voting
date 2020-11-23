@@ -12,7 +12,7 @@
             <a   class="nav-link" href="voters_list.php" >Voter List</a>
             </li>
             <li class="nav-item <?php if($page=='registervoter'){echo 'active';}?>">
-            <a class="nav-link" href="register.php">REGISTER VOTER</a>
+            <a class="nav-link" href="register.php">register voter</a>
             </li>
           
             <li class="nav-item <?php if($page=='about'){echo 'active';}?>">
@@ -20,7 +20,7 @@
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                LIVE RESULT
+                result
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="testing/mayor_result.php">Mayor and Deputy Mayor</a>
@@ -43,7 +43,7 @@
 
                 </li>
                 <li class='nav-item <?php if($page=='admin'){echo 'active';}?>'>
-                <a href="admin\index.php" class="nav-link"><i class="fas fa-user" ></i> ADMIN</a>
+                <a href="admin\index.php" class="nav-link"><i class="fas fa-user" ></i> Admin</a>
                 </li>
             </ul>
 
