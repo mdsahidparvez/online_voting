@@ -1,10 +1,29 @@
 
 
 <?php
-		//generates the random string 
+	if (function_exists('generate')){
+		
+	}
+	else{
+			function generate($len, $set = "")
+		{
+			$gen = "";
+			for($i = 0; $i < $len; $i++)
+				{
+					$set = str_shuffle($set);
+					$gen.= $set[0]; 
+				}
+			return $gen;
+		} 
+		/*$generate=generate(8, 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890');	
+		echo $generate;
+		*/
+
+		
+	}
 	
 			
-	?>
+?>
 
 <div class="modal fade" id="edit_voters<?php  echo $voters_id; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	<div class="modal-dialog">
@@ -42,22 +61,7 @@
 						<label>Lastname</label>
 							<input class="form-control"  type = "text" name = "lastname" value = "<?php echo $row1 ['lastname']?>" required="true">
 					</div>
-					
-					<!--<div class="form-group">
-						<label>Municipality</label>
-							<select class = "form-control" name = "year_level" required="true">
-								<option><?php echo $row1 ['year_level']?></option>
-								<option></option>
-								<option>1st Year</option>
-								<option>2nd Year</option>
-								<option>3rd Year</option>
-								<option>4th Year</option>
-								
-								
-								
-							
-							</select>
-					</div>	-->
+				
 					<div class="form-group">
 					<a href="../register/<?php echo $row1 ['img']?>">Citizenship Front</a>
 					<img src="../register/<?php echo $row1 ['img']?>" style="width:300px;height:300px;" onclick="window.open(this.src)" alt="">
@@ -103,30 +107,7 @@
 				
 					<div class="form-group" style="background-color:red; padding:20px;color:white;font-size:20px;">
 						<label for="">Secret Voter ID</label>
-						<input style="color:black;" id="secret_voter_id" name="secret_voter_id" type="text" value="<?php
-
-						if($row1['secret_voter_id']==null){
-
-							function generate($len, $set = "")
-							{
-								$gen = "";
-								for($i = 0; $i < $len; $i++)
-									{
-										$set = str_shuffle($set);
-										$gen.= $set[0]; 
-									}
-								return $gen;
-							} 
-							$generate=generate(8, 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890');	
-								echo $generate;
-
-						}
-						else{
-							echo $row1['secret_voter_id'];
-
-							
-						} 
-						?>">
+						<input style="color:black;" id="secret_voter_id" name="secret_voter_id" type="text" value="<?php echo $row1['citizenship_id_no'].generate(8, 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890'); ?>">
 					</div>
 						
 															

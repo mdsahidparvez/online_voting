@@ -19,7 +19,7 @@
         <div id="page-wrapper">
             <div class="row">
 				<div class="panel panel-default">
-				<iframe src="../testing/ward1_result.php"></iframe>
+				<iframe src="../testing/ward4_result.php"></iframe>
                 </div> <!-- end panel default -->
             </div>  <!-- /.row -->
         </div>   <!-- /#page-wrapper -->

@@ -10,12 +10,13 @@
 
 <style>
 	.table-hover tbody tr:hover td,
-.table-hover tbody tr:hover th {
-  background-color: #0ff5;
-}
+	.table-hover tbody tr:hover th {
+	background-color: #0ff5;
+	}
 </style>
 </head>
 <body>
+
 <div class="container ">
 
 

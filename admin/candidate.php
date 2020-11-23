@@ -12,7 +12,7 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12" >
-                    <h3 class="page-header" style="text-align:;">Candidates List</h3>
+                    <h3 class="page-header" style="text-align:;">candidates</h3>
 					
                 </div>
 				

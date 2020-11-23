@@ -11,9 +11,13 @@
 				</h4>
 			</div>
 										
-										
+									
             <div class="modal-body">
 				<form method = "post" enctype = "multipart/form-data">	
+					<div class="form-group">
+						<label>Voter Id</label>
+						<input class="form-control" type ="text" name = "voter_id" placeholder="Enter Voter Id" required="true">
+					</div>
 					<div class="form-group">
 						<label>Position</label>
 						<select class = "form-control" name = "position" required="true">
@@ -93,6 +97,7 @@
 				require_once 'dbcon.php';
 				
 				if (isset ($_POST ['save'])){
+					$voter_id=$_POST['voter_id'];
 					$position=$_POST['position'];
 					$firstname=$_POST['firstname'];
 					$lastname=$_POST['lastname'];
@@ -106,6 +111,7 @@
 					$location="upload/" . $_FILES["image"]["name"];
 					$ward=$_POST['ward'];
 					
+
 					$conn->query("INSERT INTO candidate(position,firstname,lastname,party_name,gender,img,ward)values('$position','$firstname','$lastname','$party_name','$gender','$location','$ward')")or die(mysql_error());
 				}						
 			?>					

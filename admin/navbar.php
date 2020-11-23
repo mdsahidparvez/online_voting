@@ -12,21 +12,21 @@
             <a   class="nav-link" href="..\voters_list.php" >Voter List</a>
             </li>
             <li class="nav-item <?php if($page=='registervoter'){echo 'active';}?>">
-            <a class="nav-link" href="..\register.php">REGISTER VOTER</a>
+            <a class="nav-link" href="..\register.php">register voter</a>
             </li>
             <li class="nav-item <?php if($page=='about'){echo 'active';}?>">
             <a class="nav-link" href="..\about.php">About</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                LIVE RESULT
+                result
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="../testing/mayor_result.php">Mayor and Deputy Mayor</a>
-                <a class="dropdown-item" href="#">WARD 1</a>
-                <a class="dropdown-item" href="#">WARD 2</a>
-                <a class="dropdown-item" href="#">WARD 3</a>
-                <a class="dropdown-item" href="#">WARD 4</a>
+                <a class="dropdown-item" href="../testing/ward1_result.php">WARD 1</a>
+                <a class="dropdown-item" href="../testing/ward2_result.php">WARD 2</a>
+                <a class="dropdown-item" href="../testing/ward3_result.php">WARD 3</a>
+                <a class="dropdown-item" href="../testing/ward4_result.php">WARD 4</a>>
 
 
 
@@ -42,7 +42,7 @@
 
                 </li>
                 <li class='nav-item <?php if($page=='admin'){echo 'active';}?>'>
-                <a href="index.php" class="nav-link"><i class="fas fa-user" ></i> ADMIN</a>
+                <a href="index.php" class="nav-link"><i class="fas fa-user" ></i> Admin</a>
                 </li>
             </ul>
 

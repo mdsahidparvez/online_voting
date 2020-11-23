@@ -14,7 +14,7 @@ height:70px;">
 
             <ul class="nav navbar-top-links navbar-right">
             <a   href="logout.php" style = "color: white; background-color:#f55;padding:10px;margin-right:20px;">
-					Logout
+            <i class = "fa fa-sign-out-alt" ></i> Logout
                           
                     </a>
                <?php require 'dbcon.php';
@@ -47,70 +47,88 @@ height:70px;">
 			<?php }?>
             <!-- /.navbar-top-links -->
 
-            <div class="navbar-default sidebar" role="navigation" style="height:80vh;background-color:#056; overflow-y:scroll;">
+            <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
                         
-                        <li>
-                        <a href="candidate.php" style="background-color:white; color:#023; font-size:40px;text-align:center;height:50px; line-height:30px;">Admin </a>
+                        <li class="admin">
+                        <a href="candidate.php">Admin Panel </a>
 
-                            <a href="candidate.php" style="background-color:white; color:#023; font-size:80px;text-align:center;height:90px; line-height:60px;"><i class="fas fa-user-cog"></i> </a>
+                            <a href="candidate.php"><i class="fas fa-user-cog" ></i> </a>
                         </li>
-                        <li>
-                            <a href="testingemail.php" style="background-color:#025;color:white;font-size:20px;text-align:center;"><i class="fas fa-envelope"></i> EMAIL</a>
+                        <li clas="nav-item">
+                            <a href="testingemail.php"><i class="fas fa-envelope" ></i>Email</a>
                         </li>
                             
                         <li>
-                            <a href="candidate.php" style="background-color:#045;color:white;font-size:20px;"><i class = "fa fa-user fa-fw"></i> Manage Candidates</a>
+                            <a href="candidate.php" ><i class = "fa fa-user fa-fw"></i>Manage Candidates</a>
                             <ul class="nav nav-second-level">
                             <li>
-                                    <a href="candidate.php"> All candidates</a>
+                                    <a href="candidate.php">All candidates</a>
                                 </li>
                                 <li>
-                                    <a href="ward_1_candidate.php"> Ward 1</a>
+                                    <a href="ward_1_candidate.php">Ward 1</a>
                                 </li>
                                 
                             </ul>
 						<li>
-                            <a href="#" style="background-color:#056; color:white;"><i class="fa fa-users"></i> Manage Voters</a>
+                            <a href="#"><i class="fa fa-users"></i>Manage Voters</a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="voters.php"><i class = "fa fa-user fa-fw"></i> View Voters</a>
+                                    <a href="voters.php"><i class = "fa fa-user fa-fw"></i>View Voters</a>
                                 </li>
                                 <li>
-                                    <a href="../register/index.php"><i class = "fa fa-user fa-fw"></i> Add Voters</a>
+                                    <a href="../register.php"><i class = "fa fa-user fa-fw"></i>Add Voters</a>
                                 </li>
+                                <li>
+                                    <a href="pending_registration.php"> <i class="fas fa-user-clock"></i>Pending Registration Verification</a>
+                                </li>
+                        <li>
+                            <a href="verified_voters.php" > <i class="fas fa-user-check"></i>Verified Voters</a>
+                        </li>
+						
+                        <li>
+                            <a href="rejected_voters.php" > <i class="fas fa-user-times"></i>Rejected Voters</a>
+                        </li>
+						
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
-                        <li>
-                            <a href="pending_registration.php" style="background-color:darkblue; color:white;font-size:20px;"> Pending Registration Verification</a>
-                        </li>
-                        <li>
-                            <a href="verified_voters.php" style="background-color:darkgreen; color:white;font-size:20px;"> Verified Voters</a>
-                        </li>
-						
-                        <li>
-                            <a href="rejected_voters.php" style="background-color:#cd1300; color:white;font-size:20px;"> Rejected Voters</a>
-                        </li>
-						
-                        <li>
-                            <a href="canvassing.php" style="background-color:#078; color:white;font-size:15px;"><i class="fa fa-download fa-fw"></i> REPORT</a>
-                        </li>
-                        <li>
-                            <a href="ward1_report.php" style="background-color:#078; color:white;font-size:15px;"><i class="fa fa-download fa-fw"></i> ward-1-Report</a>
-                        </li>
                        
                         <li>
-                            <a href="voters_list.php" style="background-color:#068; color:white;font-size:15px;"></i> Voters List</a>
+                            <a href="canvassing.php" ><i class="fa fa-download fa-fw"></i>REPORT</a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="ward1_report.php" ><i class="fa fa-download fa-fw"></i> ward-1-Report</a>
+                                </li>
+                                <li>
+                                    <a href="ward2_report.php" ><i class="fa fa-download fa-fw"></i> ward-2-Report</a>
+                                </li>
+                                <li>
+                                    <a href="ward3_report.php" ><i class="fa fa-download fa-fw"></i> ward-3-Report</a>
+                                </li>
+                                <li>
+                                    <a href="ward4_report.php" ><i class="fa fa-download fa-fw"></i> ward-4-Report</a>
+                                </li>
+                       
+
+                            </ul>
+
+                        </li>
+                     
+                        <li>
+                            <a href="../voters_list.php" ><i class="fas fa-list-alt"></i>Voters List</a>
                         </li>
                         <li>
-                            <a href="user.php" style="background-color:#ddd; color:black;font-size:20px;margin-top:90px;padding:20px;"><i class="fa fa-user fa-fw"></i> System User</a>
+                            <a href="schedule_election.php"><i class="far fa-clock"></i>Schedule Election</a>
+                        </li>
+                        <li>
+                            <a href="user.php"><i class="fa fa-user fa-fw"></i>System User</a>
                            
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                             <a href="logout.php" style="background-color:white;color:black;font-size:20px;padding:20px;"> <i class = "fa fa-sign-out" ></i>Logout</a>
+                             <a href="logout.php"> <i class = "fa fa-sign-out-alt" ></i>Logout</a>
                         </li>
 
                     </ul>
