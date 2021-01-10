@@ -36,9 +36,72 @@
         
 <?php include ('navbar.php');?>
 
-<div class="  countdown float-right animate__animated animate__zoomIn" style="animation-duration:1.2s;"><h6>Voting Ends in</h6><p  id="demo"></p></div>
+<!-- <div class="  countdown float-right animate__animated animate__zoomIn" style="animation-duration:1.2s;"><h6>Voting Ends in</h6><p  id="demo"></p></div> -->
 <?php include ('script.php');?>
 
+
+<!--testing ----->
+<?php
+    $query = $conn->query("SELECT *  FROM election where status='Active' ");
+    while($row1 = $query->fetch_array()){
+        $start_date=$row1['start_date'];
+        $end_date=$row1['end_date'];
+
+    }
+    date_default_timezone_set("Asia/Kathmandu");
+
+    $start_date1=new DateTime($start_date);
+    $end_date1=new DateTime($end_date);
+
+    echo "start date is $start_date";
+    echo "end date is $end_date";
+    // date_default_timezone_set('UTC');
+
+    // $currentDateTime=date('Y-m-d H:i:s');//get current date and time
+    $currentDateTime=new DateTime();//get current date and time
+    print_r ($currentDateTime);
+    print_r($start_date1);
+
+
+
+    //if scheduled start dateTime is greater than current dateTime
+    if ($start_date1>$currentDateTime){
+        echo"it is greater";
+        echo"<script>";
+            // echo'document.getElementById("demo").innerHTML = "EXPIRED";';
+            echo 'document.getElementById("login-box").innerHTML = "<h1>You cannot Vote Voting Period has EXPIRED.</h1>"; ';
+
+        echo "</script>";
+    }
+    //if scheduled end dateTime is greater than current dateTime
+    if ($end_date1<$currentDateTime){
+        echo "it is less";
+        echo"<script>";
+        // echo'document.getElementById("demo").innerHTML = "EXPIRED";';
+        echo 'document.getElementById("login-box").innerHTML = "<h1>You cannot Vote Voting Period has EXPIRED.</h1>"; ';
+
+        echo "</script>";
+    }
+    // else{
+    //     echo "No election is scheduled yet";
+    //     echo"<script>";
+    //     echo'document.getElementById("demo").innerHTML = "EXPIRED";';
+    //     echo 'document.getElementById("login-box").innerHTML = "<h1>No election is scheduled yet.</h1>"; ';
+
+    //     echo "</script>";
+
+    // }
+
+
+
+
+
+?>
+
+
+
+
+<!--end testing--->
 </body>
 
 
@@ -47,18 +110,20 @@
 
 
 
-<script>// countdown timer
+<!-- <script>// countdown timer
     
 
     
 // Set the date we're counting down to
-var countDownDate = new Date("Oct 30, 2020 20:52:25").getTime();
+var countDownDate = new Date("Oct 30, 2021 20:52:25").getTime();
+console.log(countDownDate);
 
 // Update the count down every 1 second
 var x = setInterval(function() {
   
   // Get today's date and time
   var now = new Date().getTime();
+  console.log("now time is"+ now);
 
   // Find the distance between now and the count down date
   var distance = countDownDate - now;
@@ -85,6 +150,6 @@ var x = setInterval(function() {
  
 
 
-</script>
+</script> -->
 
 </html>

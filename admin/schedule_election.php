@@ -16,8 +16,9 @@
             $election_id=$_POST['election-id'];
             $start_date=$_POST['start-date'];
             $end_date=$_POST['end-date'];
+            $status=$_POST['status'];
 
-            $conn->query("insert into election(election_id,start_date,end_date) VALUES('$election_id','$start_date','$end_date')");
+            $conn->query("insert into election(election_id,start_date,end_date,status) VALUES('$election_id','$start_date','$end_date', '$status')");
             echo "<h2><p class=\"alert-success text-center\" ><strong>Success!</strong> Election scheduled successfully </p></h2>";
 
         }
@@ -36,14 +37,19 @@
             
             <div class="form-group">
                 <label for = "start-date" >Start Date</label>
-                    <input class="form-control"  name="start-date" type="date" required = "required" autocomplete="off"  autofocus>
+                    <input class="form-control"  name="start-date" type="datetime-local" required = "required" autocomplete="off"  autofocus>
             </div>
             
             <div class="form-group">
                 <label for = "end-date" >End Date</label>
-                    <input class="form-control"  name="end-date" type="date" required = "required">
+                    <input class="form-control"  name="end-date" type="datetime-local" required = "required"  autocomplete="off"  autofocus>
             </div>
-        
+            <div class="form-group">
+                <label for = "status" >Status</label>
+                <select class="form-control" name="status" required="true">
+                    <option>Active</option>
+				</select>
+            </div>
         
             <button type="submit" class=" btn btn-success" style="margin-left:40%; padding:5px 10px;" name = "schedule">Schedule</a></button>
             

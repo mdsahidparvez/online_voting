@@ -17,6 +17,8 @@
 			session_start();
 			$data=$sql->fetch_array();
 				$_SESSION['voters_id'] = $row['voters_id'];
+				//  $_SESSION['secret_voter_id'] = $row['secret_voter_id'];
+
 				header('location:ward2.php');
 
 			
