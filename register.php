@@ -68,15 +68,27 @@
 					$image2= addslashes(file_get_contents($_FILES['image2']['tmp_name']));
 					move_uploaded_file($_FILES["image2"]["tmp_name"],"register/upload/" . $_FILES["image2"]["name"]);			
 					$location2="upload/" . $_FILES["image2"]["name"];
-					
+			
+					// check if citizenship_id_no already exists  in the database
+					$query2 = $conn->query("SELECT * FROM voters WHERE citizenship_id_no='$citizenship_id_no'") or die (mysql_error());
+					$count2 = $query2->fetch_array();
+
 
 					// check if id already exists in the database
 					$query = $conn->query("SELECT * FROM voters WHERE id_number='$id_number'") or die (mysql_error());
 					$count = $query->fetch_array();
 
+					
+
+
 					if ($count  > 0){ 
 					
 						echo "<h2><p class=\"alert-danger text-center\" ><strong>ERROR!</strong> ID already exists</p></h2>";					
+					
+					}
+					elseif($count2  > 0){ 
+					
+						echo "<h2><p class=\"alert-danger text-center\" ><strong>ERROR!</strong>Citizenship  ID already exists</p></h2>";					
 					
 					}
 					elseif ($age<16){
@@ -93,6 +105,7 @@
 						echo "<h2><p class=\"alert-danger text-center\" ><strong>ERROR!</strong> Mobile number must be 10 digit </p></h2>";					
 						
 					}
+					
 					else{ ///insert registration details into database
 						$conn->query("insert into voters(photo,id_number, password, firstname,middlename,lastname,status,img,citizenship_back,ward,dob,mobile,email,citizenship_id_no) VALUES('$location1', '$id_number', '$password','$firstname','$middlename', '$lastname','Unvoted','$location','$location2','$ward','$dob','$mobile','$email','$citizenship_id_no')");
 						

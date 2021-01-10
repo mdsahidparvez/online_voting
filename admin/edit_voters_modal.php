@@ -107,7 +107,7 @@
 				
 					<div class="form-group" style="background-color:red; padding:20px;color:white;font-size:20px;">
 						<label for="">Secret Voter ID</label>
-						<input style="color:black;" id="secret_voter_id" name="secret_voter_id" type="text" value="<?php echo $row1['citizenship_id_no'].generate(8, 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890'); ?>">
+						<input style="color:black;" id="secret_voter_id" name="secret_voter_id" type="text" value="<?php if ( $row1['secret_voter_id']!=""){echo $row1['secret_voter_id']; }else{echo $row1['citizenship_id_no'].generate(8, 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890');} ?>">
 					</div>
 						
 															
