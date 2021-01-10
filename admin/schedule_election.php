@@ -18,8 +18,41 @@
             $end_date=$_POST['end-date'];
             $status=$_POST['status'];
 
-            $conn->query("insert into election(election_id,start_date,end_date,status) VALUES('$election_id','$start_date','$end_date', '$status')");
-            echo "<h2><p class=\"alert-success text-center\" ><strong>Success!</strong> Election scheduled successfully </p></h2>";
+            //check if there is active election scheduled
+            $query2 = $conn->query("SELECT * FROM election WHERE status='Active'") or die (mysql_error());
+            $count2 = $query2->fetch_array();
+
+            //check if election id already exists
+            $query1 = $conn->query("SELECT * FROM election WHERE election_id='$election_id'") or die (mysql_error());
+            $count1 = $query1->fetch_array();
+            if($count2>0){
+                echo  "<h2><p class=\"alert-danger text-center\" ><strong>Error!! </strong> Election is already scheduled. Please wait for the election to END. </p></h2>";
+
+
+            }
+            elseif ($count1>0){
+                echo  "<h2><p class=\"alert-danger text-center\" ><strong>Error!! </strong> Election ID already exists<br>Please enter another ID </p></h2>";
+            }
+            else{
+                //create a separate result table for the Election Result
+                $conn->query("create table votes_$election_id(
+                    vote_id int(255) not null,
+                    candidate_id varchar(255) not null,
+                    voters_id varchar(255) not null,
+                    primary key(vote_id)
+                );");
+          
+
+                //insert data into election table
+                $conn->query("insert into election(election_id,start_date,end_date,status) VALUES('$election_id','$start_date','$end_date', '$status')");
+                echo "<h2><p class=\"alert-success text-center\" ><strong>Success!</strong> Election scheduled successfully </p></h2>";
+
+    
+
+            }
+
+
+          
 
         }
 
