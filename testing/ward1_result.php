@@ -1,5 +1,17 @@
+<?php //get the post data
+	$ward=$_POST['ward'];
+	$election_id=$_POST['election_id'];
+	//dynamic tablename
+	$table="votes"."_"."$election_id";
+
+	echo $table;
+
+
+?>
+
 <?php include ('../head.php');?>
 <?php include ('decrypt_and_count.php');?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,8 +21,10 @@
 </head>
 <body>
 <div class="container ">
+<?php echo "$ward"; ?>
+
 			<div class="panel-heading" style="background-color:black;color:white;text-align:center;">
-				REPORT (WARD 1)
+				REPORT (WARD <?php echo "$ward"; ?>)
 			</div>
             <table class="table table-striped table-bordered table-hover ">
 					<thead>
@@ -20,7 +34,7 @@
 					
 					</thead>
 					<?php
-							$query = $conn->query("SELECT * FROM candidate WHERE position = 'Ward Chairperson' and ward='1' ");
+							$query = $conn->query("SELECT * FROM candidate WHERE position = 'Ward Chairperson' and ward='$ward' ");
 						while($fetch = $query->fetch_array())
 						{
                              include ('checkcondition.php');
@@ -48,7 +62,7 @@
 					
 					</thead>
 					<?php
-							$query = $conn->query("SELECT * FROM candidate WHERE position = 'Member' and ward='1' ");
+							$query = $conn->query("SELECT * FROM candidate WHERE position = 'Member' and ward='$ward' ");
 						while($fetch = $query->fetch_array())
 						{
                              include ('checkcondition.php');
@@ -75,7 +89,7 @@
 					
 					</thead>
 					<?php
-							$query = $conn->query("SELECT * FROM candidate WHERE position = 'Woman Member' and ward='1' ");
+							$query = $conn->query("SELECT * FROM candidate WHERE position = 'Woman Member' and ward='$ward' ");
 						while($fetch = $query->fetch_array())
 						{
                              include ('checkcondition.php');
@@ -102,7 +116,7 @@
 					
 					</thead>
 					<?php
-							$query = $conn->query("SELECT * FROM candidate WHERE position = 'Dalit Woman Member' and ward='1' ");
+							$query = $conn->query("SELECT * FROM candidate WHERE position = 'Dalit Woman Member' and ward='$ward' ");
 						while($fetch = $query->fetch_array())
 						{
                              include ('checkcondition.php');

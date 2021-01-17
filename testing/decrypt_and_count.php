@@ -1,4 +1,5 @@
-<?php include ('../admin/dbcon.php');?>
+<?php  include ('../admin/dbcon.php'); ?>
+
 
 <?php
 
@@ -38,8 +39,14 @@
 
 	
 
+	//from static table
+	// $result=$conn->query("select * from votes ");
+	//from  dynamic table
+	echo "$table";
 
-	$result=$conn->query("select * from votes ");
+	$result=$conn->query("select * from $table ");
+
+
     while($row=$result->fetch_assoc()){
 		//$candidate_id=$row['candidate_id'];	//without decrypting
     	$candidate_id=decryptthis( $row['candidate_id'],$key); //decrypting the candidate_id 
