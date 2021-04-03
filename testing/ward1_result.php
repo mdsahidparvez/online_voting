@@ -3,10 +3,7 @@
 	$election_id=$_POST['election_id'];
 	//dynamic tablename
 	$table="votes"."_"."$election_id";
-
-	echo $table;
-
-
+	// echo $table;
 ?>
 
 <?php include ('../head.php');?>
@@ -19,9 +16,6 @@ $count_NCP_WardChairperson=0;
 $count_NCP_Member=0;
 $count_NCP_WomanMember=0;
 $count_NCP_DalitWomanMember=0;
-
-
-
 ?>
 
 <!DOCTYPE html>
@@ -34,7 +28,7 @@ $count_NCP_DalitWomanMember=0;
 <body>
 <div id="loading"></div>
 <div class="container ">
-<?php echo "$ward"; $countNCP=0;?>
+<?php /* echo "$ward"; $countNCP=0; */?>
 
 
 			<div class="panel-heading" style="background-color:black;color:white;text-align:center;">
