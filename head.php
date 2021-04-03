@@ -34,12 +34,50 @@
     <!-- Custom Fonts -->
     <link rel="stylesheet" type="text/css" href="css\fontawesome\all.css">
     <script src="css\fontawesome\all.js"></script>
+    <style>
+        #loading {
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 100;
+          width: 100vw;
+          height: 100vh;
+          background-color: #fff;
+          background-image: url(./images/spinner.gif);
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+
+
+    </style>
     <script>
       $(function () {
         $(document).scroll(function () {
           var $nav = $(".fixed-top");
           $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
         });
+      });
+
+      //testing
+
+
+      function onReady(callback) {
+        var intervalId = window.setInterval(function() {
+          if (document.getElementsByTagName('body')[0] !== undefined) {
+            window.clearInterval(intervalId);
+            callback.call(this);
+          }
+        }, 1000);
+      }
+
+      function setVisible(selector, visible) {
+        document.querySelector(selector).style.display = visible ? 'block' : 'none';
+      }
+
+      onReady(function() {
+        setVisible('.container', true);
+        setVisible('#loading', false);
       });
     </script>
     

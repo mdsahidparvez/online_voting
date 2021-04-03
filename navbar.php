@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <a class="navbar-brand" href="#">HAMRO VOTE</a>
+        <a class="navbar-brand" href="./index.php">HAMRO VOTE</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -16,7 +16,10 @@
             </li>
           
             <li class="nav-item <?php if($page=='about'){echo 'active';}?>">
-            <a class="nav-link" href="about.php">About</a>
+                <a class="nav-link" href="about.php">About</a>
+            </li>
+            <li class="nav-item <?php if($page=='result'){echo 'active';}?>">
+                <a class="nav-link" href="resultpage.php">Election Result</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

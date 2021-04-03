@@ -1,5 +1,7 @@
 <?php  $page='registervoter'; include ('head.php'); ?>
 <body>
+	<div id="loading"></div>
+
 	<link rel="stylesheet" href="register.css"> <!--css for registration form -->
 
 	<?php include ('navbar.php'); ?>
@@ -147,7 +149,7 @@
 													$change =  passFunc(8, 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890');
 											?>	
 											<label>Password</label>
-												<input class="form-control"  type = "text" placeholder="minimum 8 character" name = "password" id = "pass" required="true" autocomplete="off" />
+												<input class="form-control"  type = "password" placeholder="minimum 8 character" name = "password" id = "pass" required="true" autocomplete="off" />
 												<!--<input type = "button" value = "Generate" onclick = "document.getElementById('pass').value = '<?php echo $change?>'">-->
 										</div>
 										<div class="note">
