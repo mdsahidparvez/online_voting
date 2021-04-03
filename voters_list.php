@@ -1,6 +1,8 @@
 <?php $page='voterlist'; include ('head.php');?>
 
 <body>
+    <div id="loading"></div>
+
     <?php include ('navbar.php');?>
 
     <div class="container-fluid" style="margin-top:60px; background-color:#026899; padding:40px; color:#fff;height:100vh;">

@@ -1,5 +1,7 @@
 <?php  $page='registervoter'; include ('head.php'); ?>
 <body>
+	<div id="loading"></div>
+
 	<link rel="stylesheet" href="register.css"> <!--css for registration form -->
 
 	<?php include ('navbar.php'); ?>

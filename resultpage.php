@@ -1,5 +1,56 @@
 <?php  $page='resultpage'; include ('head.php'); ?>
-<body style="background:#eee;">
+<!--testingg------>
+<?php
+    require 'admin/dbcon.php';
+    $query = $conn->query("SELECT *  FROM election where status='Active' ");
+    while($row1 = $query->fetch_array()){
+        $start_date=$row1['start_date'];
+        $end_date=$row1['end_date'];
+
+        $election_id=$row1['election_id'];
+        date_default_timezone_set("Asia/Kathmandu");
+
+        $start_date1=new DateTime($start_date);
+        $end_date1=new DateTime($end_date);
+
+        // echo "start date is $start_date";
+        // echo "end date is $end_date";
+        // date_default_timezone_set('UTC');
+
+        // $currentDateTime=date('Y-m-d H:i:s');//get current date and time
+        $currentDateTime=new DateTime();//get current date and time
+        // print_r ($currentDateTime);
+        // print_r($start_date1);
+
+
+
+        //if scheduled end dateTime is less than current dateTime
+        if ($end_date1<$currentDateTime){
+            $conn->query ("UPDATE election SET status = 'completed'  WHERE election_id = '$election_id'")or die(mysql_error());
+
+
+            
+        }
+
+    }
+    
+  
+
+
+
+
+?>
+
+
+
+
+<!-------end testing -------->
+
+
+
+<body>
+<div id="loading"></div>
+
 	<link rel="stylesheet" href="register.css"> <!--css for registration form -->
 
 	<?php include ('navbar.php'); ?>
@@ -21,7 +72,7 @@
         <?php 
             require 'admin/dbcon.php';
             $bool = false;
-            $query = $conn->query("SELECT * FROM  election  ORDER BY start_date DESC");
+            $query = $conn->query("SELECT * FROM  election  WHERE status='completed' ");
                 while($row = $query->fetch_array()){
                     $election_id=$row['election_id'];
         ?>
